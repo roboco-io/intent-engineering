@@ -53,9 +53,9 @@ git push origin main
 ## i18n Rules
 
 - **English is the source of truth** — all content is authored in English first
-- Translation pages are placed under `docs/ko/`, `docs/zh/`, `docs/ja/` mirroring the same file structure
-- Technical terms (Intent, seed, exploring, clarified, killed, etc.) must remain untranslated
-- Changes to English originals must be propagated to all translation pages
+- Translation is provided via Google Translate links (footer of each page), not static translation files
+- Each page includes `한국어 / 中文 / 日本語` links pointing to `translate.google.com/translate?sl=en&tl={lang}&u={page-url}`
+- When adding a new page, include the translate bar in the footer with the correct page URL
 
 ## Core Concept
 

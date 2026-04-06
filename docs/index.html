@@ -321,6 +321,28 @@
             font-size: 16px;
         }
 
+        /* Translate bar */
+        .translate-bar {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+        }
+        .translate-bar a {
+            color: var(--text-muted);
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+        .translate-bar a:hover {
+            color: var(--text);
+            border-color: var(--text-muted);
+            text-decoration: none;
+        }
+
         /* Footer */
         footer {
             max-width: 800px;
@@ -551,6 +573,12 @@
         <a href="guide/quickstart.html" class="btn btn-primary">Quick Start Guide</a>
         <a href="https://github.com/roboco-io/intent-engineering" class="btn btn-ghost">GitHub</a>
     </div>
+</div>
+
+<div class="translate-bar">
+    <a href="https://translate.google.com/translate?sl=en&tl=ko&u=https://roboco-io.github.io/intent-engineering/">한국어</a>
+    <a href="https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://roboco-io.github.io/intent-engineering/">中文</a>
+    <a href="https://translate.google.com/translate?sl=en&tl=ja&u=https://roboco-io.github.io/intent-engineering/">日本語</a>
 </div>
 
 <footer>

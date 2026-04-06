@@ -67,6 +67,15 @@
 
         .highlight { color: var(--text); }
 
+        .translate-bar {
+            display: flex; justify-content: center; gap: 12px;
+            padding: 16px 24px; border-top: 1px solid var(--border); font-size: 13px;
+        }
+        .translate-bar a {
+            color: var(--text-muted); padding: 4px 10px;
+            border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
+        }
+        .translate-bar a:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
         footer {
             max-width: 800px; margin: 0 auto; padding: 40px 24px;
             border-top: 1px solid var(--border); text-align: center;
@@ -225,6 +234,12 @@
     <p>That's Intent Engineering. No framework to install. No tools to configure. Just a discipline of knowing what you want and writing it down.</p>
 
     <p><a href="quickstart.html">→ Quick Start Guide</a></p>
+</div>
+
+<div class="translate-bar">
+    <a href="https://translate.google.com/translate?sl=en&tl=ko&u=https://roboco-io.github.io/intent-engineering/guide/concept.html">한국어</a>
+    <a href="https://translate.google.com/translate?sl=en&tl=zh-CN&u=https://roboco-io.github.io/intent-engineering/guide/concept.html">中文</a>
+    <a href="https://translate.google.com/translate?sl=en&tl=ja&u=https://roboco-io.github.io/intent-engineering/guide/concept.html">日本語</a>
 </div>
 
 <footer>
