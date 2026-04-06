@@ -1,0 +1,33 @@
+name: Suggestion
+description: Suggest an improvement or idea for Intent Engineering
+title: "[Suggestion] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share your idea!
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What would you like to suggest?
+      placeholder: A brief description of your suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why would this be useful? What problem does it solve?
+      placeholder: Explain the reasoning behind your suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered any alternative approaches?
+      placeholder: Any other approaches you've thought about
+    validations:
+      required: false
