@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>核心概念 — Intent Engineering</title>
+    <style>
+        :root {
+            --bg: #0a0a0a; --surface: #141414; --border: #222;
+            --text: #e5e5e5; --text-muted: #888; --accent: #3b82f6;
+            --green: #22c55e; --red: #ef4444; --purple: #a855f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav {
+            max-width: 800px; margin: 0 auto; padding: 20px 24px;
+            font-size: 14px; color: var(--text-muted);
+        }
+        .content {
+            max-width: 800px; margin: 0 auto; padding: 40px 24px 100px;
+        }
+        .content h1 {
+            font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;
+        }
+        .content > .subtitle { font-size: 17px; color: var(--text-muted); margin-bottom: 48px; }
+        h2 {
+            font-size: 22px; font-weight: 700; margin: 48px 0 16px;
+            padding-top: 32px; border-top: 1px solid var(--border);
+        }
+        h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+        p { color: var(--text-muted); margin-bottom: 16px; }
+        strong { color: var(--text); }
+
+        pre {
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            padding: 20px 24px; overflow-x: auto; margin: 16px 0 24px;
+            font-family: 'SF Mono', 'Fira Code', monospace; font-size: 14px; line-height: 1.8;
+            color: var(--text-muted);
+        }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface); padding: 2px 6px; border-radius: 4px; font-size: 14px;
+        }
+        pre code { background: none; padding: 0; }
+
+        .callout {
+            background: var(--surface); border-left: 3px solid var(--accent);
+            padding: 20px 24px; margin: 24px 0; border-radius: 0 10px 10px 0;
+        }
+        .callout p { margin-bottom: 0; }
+
+        table {
+            width: 100%; border-collapse: collapse; margin: 16px 0 24px;
+            font-size: 14px;
+        }
+        th, td {
+            text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border);
+        }
+        th { color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+        td { color: var(--text-muted); }
+
+        .highlight { color: var(--text); }
+
+        .translate-bar {
+            display: flex; justify-content: center; gap: 12px;
+            padding: 16px 24px; border-top: 1px solid var(--border); font-size: 13px;
+        }
+        .translate-bar a {
+            color: var(--text-muted); padding: 4px 10px;
+            border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
+        }
+        .translate-bar a:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
+        footer {
+            max-width: 800px; margin: 0 auto; padding: 40px 24px;
+            border-top: 1px solid var(--border); text-align: center;
+            color: var(--text-muted); font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="../index.html">&larr; Intent Engineering</a> / 核心概念
+</div>
+
+<div class="content">
+    <h1>核心概念</h1>
+    <p class="subtitle">Intent Engineering 为何存在、它与前人的关系，以及它如何改变我们构建软件的方式。</p>
+
+    <h2>瓶颈已经转移</h2>
+
+    <p>五十年来，软件工程围绕一个单一约束进行优化：<strong>编写代码成本高昂</strong>。我们发明了设计模式、代码审查、CI/CD、微服务、敏捷 -- 所有这些都是为了管理人类编写代码的成本和风险。</p>
+
+    <p>氛围编程一夜之间消解了这个约束。AI 代理现在可以比任何人类团队更快地生成、审查、测试和部署代码。一位资深软件工程师六个月内提交 10,000 次 commit 不再是科幻 -- 这就是日常。</p>
+
+    <p>但一个新瓶颈出现了：<strong>意图</strong>。当代码免费时，稀缺资源是知道该构建什么、为什么构建以及不该构建什么。没有清晰的意图，AI 会产出大量技术上正确但战略上无用的输出。</p>
+
+    <div class="callout">
+        <p>Intent Engineering 是一种接受这一转变的范式。它将所有人类精力投入到精确记录意图上，并将下游的一切 -- 规格生成、实现、验证、部署 -- 委托给 AI。</p>
+    </div>
+
+    <h2>Intent Engineering 不是什么</h2>
+
+    <p>它<strong>不是提示工程</strong>。提示工程优化的是你在单次会话中如何与 AI 对话。Intent Engineering 定义的是一份持久的、不断演进的文档，它塑造所有会话。</p>
+
+    <p>它<strong>不是设计文档</strong>。设计文档规定如何构建：架构、技术栈、时间表、里程碑。Intent 文档明确排除"如何实现"。实现决策是 AI 的领域。</p>
+
+    <p>它<strong>不是 PRD</strong>。产品需求文档是全面且静态的。Intent 文档是精简且鲜活的。它们通过探索而演进，也可以被终止。</p>
+
+    <p>它<strong>不是框架或工具</strong>。它是一个 markdown 文件和一种纪律。你今天就可以在任何项目中零依赖地采用它。</p>
+
+    <h2>三个层次</h2>
+
+    <p>一份 Intent 文档恰好有三个内容层次。超出这些的都是噪音，会混淆 AI 并浪费人类的注意力。</p>
+
+    <h3>Why -- 存在的理由</h3>
+
+    <p>要解决的问题、成功后的目标、以及如何衡量成功。在探索阶段，Why 是一个假设 -- 一个可能是错的赌注。在 clarified 阶段，Why 是有证据支撑的坚定信念。如果 Why 发生根本性改变，那就是一次战略转向，这应该是罕见且深思熟虑的。</p>
+
+    <h3>What -- 正在构建的东西</h3>
+
+    <p>功能、用户流程和边界情况。写得足够具体以便 AI 能从中推导任务，但绝不规定实现方式。"用户可以将报告导出为 PDF"是好的。"使用 puppeteer 通过 headless Chrome 生成 PDF"是"如何实现"，不属于这里。</p>
+
+    <h3>Not -- 绝不能逾越的边界</h3>
+
+    <p>这是最被低估的层次。安全约束、范围限制、质量标准、禁止的模式。没有 Not，AI 会做出看似合理但违反你未声明假设的决定。"绝不在本地存储生产环境密钥。""不允许 any 类型。""移动端不在范围内。"这些界限让你免受 AI 乐观式帮助的伤害。</p>
+
+    <h2>Learnings -- 演进引擎</h2>
+
+    <p>人们很少在一开始就知道自己想要什么。一个想法始于 seed -- 模糊、不确定、充满假设。通往清晰的道路要经过<strong>探索</strong>：构建原型、访谈用户、研究竞品、快速失败。</p>
+
+    <p>Learnings 是这些探索及其结果的时间戳日志。每条记录记载了尝试了什么、发现了什么、以及因此做出了什么改变。这有两个作用：</p>
+
+    <p><strong>对人类而言：</strong>它创建了一条决策审计轨迹。当你回顾项目为何转向时，答案在 Learnings 中，而不在某个人的记忆里。</p>
+
+    <p><strong>对 AI 而言：</strong>它提供了再多代码也无法替代的上下文。一个阅读 Learnings 部分的 AI 不仅理解项目是什么，还理解它是如何走到这里的，以及哪些已经尝试过了。</p>
+
+    <h2>生命周期</h2>
+
+    <p>Intent 不是静态的。它经历四个状态：</p>
+
+    <table>
+        <tr><th>状态</th><th>描述</th><th>该怎么做</th></tr>
+        <tr>
+            <td class="highlight">seed</td>
+            <td>只是一个想法。Why 是猜测，What/Not 为空或模糊。</td>
+            <td>写一个假设。开始你的第一个实验。</td>
+        </tr>
+        <tr>
+            <td class="highlight">exploring</td>
+            <td>通过原型、研究、访谈积极验证假设。</td>
+            <td>进行实验。记录学习成果。随时更新 Why/What/Not。</td>
+        </tr>
+        <tr>
+            <td class="highlight">clarified</td>
+            <td>三个层次都已确信填写完毕。没有不确定标记。</td>
+            <td>交给 AI。开始构建。</td>
+        </tr>
+        <tr>
+            <td class="highlight">killed</td>
+            <td>证据表明这不值得构建，或已有现成的解决方案。</td>
+            <td>记录原因。继续前进。这是一个好结果。</td>
+        </tr>
+    </table>
+
+    <p>最重要的转换是<strong>任何状态 → killed</strong>。知道何时停止比知道何时开始更难。一次记录完善的终止可以节省数月的浪费，并防止同一死胡同被再次探索。</p>
+
+    <h2>与现有概念的关系</h2>
+
+    <table>
+        <tr><th>概念</th><th>范围</th><th>与 Intent Engineering 的关系</th></tr>
+        <tr>
+            <td class="highlight">上下文工程</td>
+            <td>按任务，短暂的</td>
+            <td>Intent 文档成为构建所有任务框架的顶层上下文。</td>
+        </tr>
+        <tr>
+            <td class="highlight">约束工程</td>
+            <td>工具和环境配置</td>
+            <td>Not 层是约束规则（CLAUDE.md、代码检查器、CI 检查）的真实来源。</td>
+        </tr>
+        <tr>
+            <td class="highlight">规格驱动开发</td>
+            <td>功能规格</td>
+            <td>规格从 What 层自动推导。人类不再编写它们。</td>
+        </tr>
+        <tr>
+            <td class="highlight">氛围编程</td>
+            <td>代码生成</td>
+            <td>当意图清晰时，氛围编程效果最佳。Intent Engineering 提供这种清晰度。</td>
+        </tr>
+    </table>
+
+    <h2>自动化流水线</h2>
+
+    <p>当 Intent Engineering 全面运作时，人类只接触流水线中的两个点：最顶端（编写意图）和最底端（评估结果并更新意图）。</p>
+
+    <pre><code>  [Intent 文档]          ← 人类编写和维护
+         ↓
+  [规格生成]              ← AI 从 Why/What/Not 推导任务列表
+         ↓
+  [实现]                  ← AI 代理并行编写代码
+         ↓
+  [验证]                  ← AI 交叉审查、测试、代码检查
+         ↓
+  [部署]                  ← CI/CD 自动化发布
+         ↓
+  [反馈]                  ← 用户数据回流
+         ↓
+  [学习与决策]            ← 人类评估，更新意图或终止</code></pre>
+
+    <p>从意图到反馈之间的一切在今天都是可自动化的。上下文工程、约束工程、规格编写 -- 所有这些都可以从一份写得好的 Intent 文档中推导出来。人类不可替代的工作是决定<strong>什么重要</strong>以及<strong>我们学到了什么</strong>。</p>
+
+    <h2>为什么有效</h2>
+
+    <p><strong>约束激发创造力。</strong> 通过将文档限制在 Why/What/Not，你迫使自己思考什么才真正重要。其他所有格式 -- PRD、设计文档、项目计划 -- 都允许你藏在细节之后。Intent Engineering 让你无处可藏。</p>
+
+    <p><strong>AI 比你更擅长"如何实现"。</strong> AI 已经阅读了每一种架构模式、每一份框架文档、每一个 Stack Overflow 答案。告诉它如何实现会将其限制在你的知识范围内。告诉它要实现什么则能释放其全部能力。</p>
+
+    <p><strong>终止也是生产力。</strong> 大多数工程文化将放弃的项目视为失败。Intent Engineering 将一次记录完善的终止视为学习资产。一个被终止项目的 Learnings 部分可能比一个已上线项目的代码更有价值。</p>
+
+    <p><strong>意图的精度可以扩展。</strong> Why 部分中一句清晰的话 -- "新用户在 30 秒内体验到首次价值" -- 会传播到每一个 AI 生成的任务、每一次代码审查、每一个测试中。模糊的意图产生模糊的代码。精准的意图产生精准的系统。</p>
+
+    <h2>开始使用</h2>
+
+    <p>在项目根目录创建一个名为 <code>INTENT.md</code> 的文件。填写 Why。对 What 和 Not 保持诚实 -- 将未知项标记为 <code>(?)</code>。开始探索。记录你学到的东西。当证据要求时更新或终止。</p>
+
+    <p>这就是 Intent Engineering。没有要安装的框架。没有要配置的工具。只是一种知道自己想要什么并把它写下来的纪律。</p>
+
+    <p><a href="quickstart.html">→ 快速开始指南</a></p>
+</div>
+
+<div class="translate-bar">
+    <a href="../../guide/concept.html">English</a>
+    <a href="../../ko/guide/concept.html">한국어</a>
+    <a href="../../ja/guide/concept.html">日本語</a>
+</div>
+
+<footer>
+    <a href="../index.html">Intent Engineering</a> &middot; <a href="quickstart.html">快速开始</a> &middot; <a href="https://github.com/roboco-io/intent-engineering">GitHub</a>
+</footer>
+
+</body>
+</html>

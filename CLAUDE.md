@@ -22,13 +22,17 @@ Intent Engineering — a static site and documentation project introducing the "
 ```
 docs/                    # GH Pages serving folder
 ├── .nojekyll            # Disable Jekyll
-├── index.html           # Landing page (Hero, Problem, Framework, Lifecycle, Pipeline, Principles)
+├── index.html           # Landing page (English, source of truth)
 ├── assets/              # Static assets
-└── guide/
-    ├── quickstart.html  # 5-minute quickstart guide
-    └── concept.html     # Full paradigm concept explanation
+├── guide/
+│   ├── quickstart.html  # 5-minute quickstart guide
+│   └── concept.html     # Full paradigm concept explanation
+├── ko/                  # Korean translation (mirrors English structure)
+├── zh/                  # Chinese (Simplified) translation
+└── ja/                  # Japanese translation
 INTENT.template.md       # Distributable INTENT.md template
 HANDOFF.md               # Project status and next steps
+.claude/commands/translate.md  # /translate skill for i18n automation
 ```
 
 ## Development
@@ -53,9 +57,11 @@ git push origin main
 ## i18n Rules
 
 - **English is the source of truth** — all content is authored in English first
-- Translation is provided via Google Translate links (footer of each page), not static translation files
-- Each page includes `한국어 / 中文 / 日本語` links pointing to `translate.google.com/translate?sl=en&tl={lang}&u={page-url}`
-- When adding a new page, include the translate bar in the footer with the correct page URL
+- Static translation pages under `docs/ko/`, `docs/zh/`, `docs/ja/` mirror the English file structure
+- Run `/translate` to regenerate translations after editing English sources (hook reminds you automatically)
+- Technical terms (Intent, seed, exploring, clarified, killed, etc.) must remain untranslated
+- Each page footer has a translate-bar linking to the other language versions
+- When adding a new English page, add corresponding pages in all 3 language directories
 
 ## Core Concept
 

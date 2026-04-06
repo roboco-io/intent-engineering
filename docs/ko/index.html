@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intent Engineering — Ship intent, not code.</title>
-    <meta name="description" content="A practical paradigm for the age of vibe coding. Document your intent precisely, delegate everything else to AI.">
+    <title>Intent Engineering — Intent를 전달하라, 코드가 아니라.</title>
+    <meta name="description" content="바이브 코딩 시대를 위한 실용적 패러다임. Intent를 정확하게 문서화하고, 나머지는 모두 AI에게 위임하세요.">
     <style>
         :root {
             --bg: #0a0a0a;
@@ -358,43 +358,43 @@
 <body>
 
 <div class="hero">
-    <div class="hero-badge">A paradigm for the age of vibe coding</div>
-    <h1>Ship <span>intent</span>,<br>not code.</h1>
-    <p>Document your intent precisely. Delegate everything else to AI. The only engineering that matters is knowing what to build and what not to.</p>
+    <div class="hero-badge">바이브 코딩 시대를 위한 패러다임</div>
+    <h1><span>Intent</span>를 전달하라,<br>코드가 아니라.</h1>
+    <p>Intent를 정확하게 문서화하세요. 나머지는 모두 AI에게 위임하세요. 진정으로 중요한 엔지니어링은 무엇을 만들고, 무엇을 만들지 않을지 아는 것입니다.</p>
     <div class="hero-cta">
-        <a href="guide/quickstart.html" class="btn btn-primary">Get Started</a>
-        <a href="guide/concept.html" class="btn btn-ghost">Read the Concept</a>
+        <a href="guide/quickstart.html" class="btn btn-primary">시작하기</a>
+        <a href="guide/concept.html" class="btn btn-ghost">컨셉 읽기</a>
     </div>
 </div>
 
 <div class="premise">
-    <blockquote>"Code was never the bottleneck. You will spend most of your time figuring out what to build."</blockquote>
-    <div class="attr">— Staff SWE turned vibe coding practitioner</div>
+    <blockquote>"코드는 결코 병목이 아니었습니다. 당신은 대부분의 시간을 무엇을 만들어야 하는지 파악하는 데 쓰게 될 것입니다."</blockquote>
+    <div class="attr">— 바이브 코딩 실천가로 전향한 시니어 엔지니어</div>
 </div>
 
 <!-- The Problem -->
 <section>
-    <h2><span class="num">01 — </span>The Problem</h2>
-    <p>Vibe coding made code generation instant. But without clear intent, AI produces 337 lines of tech specs when you needed 47 lines of direction.</p>
+    <h2><span class="num">01 — </span>문제</h2>
+    <p>바이브 코딩은 코드 생성을 즉각적으로 만들었습니다. 하지만 명확한 Intent 없이, AI는 47줄의 방향이 필요한 곳에 337줄의 기술 스펙을 생성합니다.</p>
     <div class="comparison">
         <div class="comp-card old">
-            <h3>Without Intent</h3>
+            <h3>Intent 없이</h3>
             <ul>
-                <li>AI generates tech stack recommendations</li>
-                <li>AI writes 7-week timelines</li>
-                <li>AI creates user stories, glossaries, sign-off sheets</li>
-                <li>8 files, 3,740 lines, 132KB of noise</li>
-                <li>You still don't know what to build</li>
+                <li>AI가 기술 스택 추천을 생성함</li>
+                <li>AI가 7주짜리 일정을 작성함</li>
+                <li>AI가 유저 스토리, 용어집, 승인 문서를 만듦</li>
+                <li>8개 파일, 3,740줄, 132KB의 노이즈</li>
+                <li>여전히 무엇을 만들어야 할지 모름</li>
             </ul>
         </div>
         <div class="comp-card new">
-            <h3>With Intent</h3>
+            <h3>Intent와 함께</h3>
             <ul>
-                <li>Why: one paragraph on why this exists</li>
-                <li>What: concrete features, no how</li>
-                <li>Not: explicit boundaries AI won't cross</li>
-                <li>1 file, 47 lines, clarity</li>
-                <li>AI builds exactly what you meant</li>
+                <li>Why: 이것이 왜 존재하는지에 대한 한 단락</li>
+                <li>What: 구체적인 기능, How 없이</li>
+                <li>Not: AI가 넘지 않을 명시적 경계</li>
+                <li>1개 파일, 47줄, 명확함</li>
+                <li>AI가 당신이 의도한 것을 정확히 만듦</li>
             </ul>
         </div>
     </div>
@@ -402,46 +402,46 @@
 
 <!-- The Framework -->
 <section>
-    <h2><span class="num">02 — </span>The Framework</h2>
-    <p>An Intent Document has four sections. Nothing more.</p>
+    <h2><span class="num">02 — </span>프레임워크</h2>
+    <p>Intent 문서는 네 개의 섹션으로 구성됩니다. 그 이상은 없습니다.</p>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-why">Why</span>
-            <h3>Why does this exist?</h3>
+            <h3>이것은 왜 존재하는가?</h3>
         </div>
-        <p>The problem, the goal, the measure of success. Changes here mean a pivot. In explore mode, this is a hypothesis. In clarified mode, this is conviction.</p>
+        <p>문제, 목표, 성공의 척도. 여기가 바뀌면 피벗을 의미합니다. exploring 모드에서는 가설이고, clarified 모드에서는 확신입니다.</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-what">What</span>
-            <h3>What are we building?</h3>
+            <h3>우리는 무엇을 만드는가?</h3>
         </div>
-        <p>Features, user flows, edge cases. Concrete but never prescriptive about implementation. No tech stack, no architecture, no timeline. Those are AI's job.</p>
+        <p>기능, 사용자 흐름, 엣지 케이스. 구체적이되 구현 방법에 대해서는 절대 지시하지 않습니다. 기술 스택도, 아키텍처도, 일정도 없습니다. 그것들은 AI의 몫입니다.</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-not">Not</span>
-            <h3>What will we never do?</h3>
+            <h3>절대 하지 않을 것은?</h3>
         </div>
-        <p>Hard boundaries AI must not cross. Security constraints, scope limits, quality bars, forbidden patterns. This is the guardrail that makes autonomous AI safe.</p>
+        <p>AI가 넘어서는 안 되는 강경한 경계. 보안 제약, 범위 제한, 품질 기준, 금지된 패턴. 이것이 자율적 AI를 안전하게 만드는 가드레일입니다.</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-learnings">Learnings</span>
-            <h3>What did we discover?</h3>
+            <h3>우리는 무엇을 발견했는가?</h3>
         </div>
-        <p>A living log of experiments, interviews, prototypes, and their outcomes. Each entry has a date, what was tried, what was learned, and what's next. This is how intent evolves.</p>
+        <p>실험, 인터뷰, 프로토타입, 그리고 그 결과에 대한 살아있는 기록. 각 항목에는 날짜, 시도한 것, 배운 것, 다음 할 일이 포함됩니다. 이것이 Intent가 진화하는 방식입니다.</p>
     </div>
 </section>
 
 <!-- The Lifecycle -->
 <section>
-    <h2><span class="num">03 — </span>The Lifecycle</h2>
-    <p>Intent is not written once. It evolves through exploration and learning, or dies when evidence says so.</p>
+    <h2><span class="num">03 — </span>생명주기</h2>
+    <p>Intent는 한 번 작성하고 끝나는 것이 아닙니다. 탐색과 학습을 통해 진화하거나, 증거가 말할 때 죽습니다.</p>
 
     <div class="lifecycle">
         <div class="lc-node lc-seed">seed</div>
@@ -454,7 +454,7 @@
     </div>
     <div class="lifecycle" style="margin-top:-20px;">
         <div class="lc-node lc-killed">killed</div>
-        <span style="color:var(--text-muted);font-size:13px;padding-left:12px;">&larr; any state can reach here. That's a good outcome too.</span>
+        <span style="color:var(--text-muted);font-size:13px;padding-left:12px;">&larr; 어떤 상태에서든 여기에 도달할 수 있습니다. 그것도 좋은 결과입니다.</span>
     </div>
 
     <div class="codeblock">
@@ -485,104 +485,104 @@
 
 <!-- The Pipeline -->
 <section>
-    <h2><span class="num">04 — </span>The Pipeline</h2>
-    <p>Humans touch the top and the bottom. Everything in between is AI.</p>
+    <h2><span class="num">04 — </span>파이프라인</h2>
+    <p>사람은 맨 위와 맨 아래만 담당합니다. 그 사이의 모든 것은 AI가 합니다.</p>
 
     <div class="pipeline">
         <div class="pipe-step">
             <div class="pipe-icon pipe-human">&#x270D;</div>
             <div>
-                <div class="pipe-label">Write Intent</div>
-                <div class="pipe-desc">Fill in Why / What / Not using templates</div>
+                <div class="pipe-label">Intent 작성</div>
+                <div class="pipe-desc">템플릿을 사용하여 Why / What / Not 작성</div>
             </div>
-            <span class="pipe-who who-human">Human</span>
+            <span class="pipe-who who-human">사람</span>
         </div>
         <div class="pipe-step">
             <div class="pipe-icon pipe-ai">&#x2699;</div>
             <div>
-                <div class="pipe-label">Generate Spec</div>
-                <div class="pipe-desc">AI derives task list from Intent Document</div>
+                <div class="pipe-label">스펙 생성</div>
+                <div class="pipe-desc">AI가 Intent 문서에서 태스크 목록을 도출</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
         <div class="pipe-step">
             <div class="pipe-icon pipe-ai">&#x1F4BB;</div>
             <div>
-                <div class="pipe-label">Implement</div>
-                <div class="pipe-desc">AI agents write code across parallel worktrees</div>
+                <div class="pipe-label">구현</div>
+                <div class="pipe-desc">AI 에이전트가 병렬 워크트리에서 코드 작성</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
         <div class="pipe-step">
             <div class="pipe-icon pipe-ai">&#x1F50D;</div>
             <div>
-                <div class="pipe-label">Verify</div>
-                <div class="pipe-desc">Cross-review, tests, lint — AI checks its own work</div>
+                <div class="pipe-label">검증</div>
+                <div class="pipe-desc">교차 리뷰, 테스트, 린트 — AI가 자체 작업을 확인</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
         <div class="pipe-step">
             <div class="pipe-icon pipe-ai">&#x1F680;</div>
             <div>
-                <div class="pipe-label">Deploy</div>
-                <div class="pipe-desc">CI/CD pushes to production</div>
+                <div class="pipe-label">배포</div>
+                <div class="pipe-desc">CI/CD가 프로덕션에 푸시</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
         <div class="pipe-step">
             <div class="pipe-icon pipe-human">&#x1F4A1;</div>
             <div>
-                <div class="pipe-label">Learn &amp; Decide</div>
-                <div class="pipe-desc">Evaluate feedback, update intent or kill the project</div>
+                <div class="pipe-label">학습 &amp; 결정</div>
+                <div class="pipe-desc">피드백 평가, Intent 업데이트 또는 프로젝트 종료</div>
             </div>
-            <span class="pipe-who who-human">Human</span>
+            <span class="pipe-who who-human">사람</span>
         </div>
     </div>
 </section>
 
 <!-- Principles -->
 <section>
-    <h2><span class="num">05 — </span>Principles</h2>
-    <p>Four rules that make Intent Engineering work.</p>
+    <h2><span class="num">05 — </span>원칙</h2>
+    <p>Intent Engineering을 작동하게 만드는 네 가지 규칙.</p>
 
     <div class="principles">
         <div class="principle">
-            <h3>Never write How</h3>
-            <p>The moment you specify implementation, you're doing traditional engineering. Write "no external cache layer" instead of "use Redis." Constrain the boundaries, not the path.</p>
+            <h3>절대 How를 쓰지 마라</h3>
+            <p>구현을 지정하는 순간, 당신은 전통적인 엔지니어링을 하는 것입니다. "Redis를 사용하라" 대신 "외부 캐시 레이어 없음"이라고 쓰세요. 경로가 아닌 경계를 제한하세요.</p>
         </div>
         <div class="principle">
-            <h3>Admit uncertainty</h3>
-            <p>Mark unknowns with (?). An honest "I don't know yet" is more valuable than a confident guess. Intent clarifies through exploration, not imagination.</p>
+            <h3>불확실성을 인정하라</h3>
+            <p>모르는 것에는 (?)를 표시하세요. 솔직한 "아직 모르겠다"가 자신 있는 추측보다 가치가 있습니다. Intent는 상상이 아닌 탐색을 통해 명확해집니다.</p>
         </div>
         <div class="principle">
-            <h3>Kill fast</h3>
-            <p>If exploration shows the idea is dead, record why and move on. A well-documented killed intent saves future you from repeating the same mistake.</p>
+            <h3>빠르게 죽여라</h3>
+            <p>탐색 결과 아이디어가 죽은 것으로 판명되면, 이유를 기록하고 넘어가세요. 잘 문서화된 killed Intent는 미래의 당신이 같은 실수를 반복하는 것을 막아줍니다.</p>
         </div>
         <div class="principle">
-            <h3>Intent precision = output quality</h3>
-            <p>"Build a good app" is not intent. "New users experience first value in 30 seconds" is. The sharper your intent, the better the AI performs.</p>
+            <h3>Intent의 정밀도 = 결과물의 품질</h3>
+            <p>"좋은 앱을 만들어라"는 Intent가 아닙니다. "신규 사용자가 30초 안에 첫 번째 가치를 경험한다"가 Intent입니다. Intent가 날카로울수록 AI의 성능이 좋아집니다.</p>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <div class="cta-section">
-    <h2>Start with intent.</h2>
-    <p>Grab the template, fill in Why/What/Not, and let AI handle the rest.</p>
+    <h2>Intent로 시작하세요.</h2>
+    <p>템플릿을 받고, Why/What/Not을 작성하고, 나머지는 AI에게 맡기세요.</p>
     <div class="hero-cta">
-        <a href="guide/quickstart.html" class="btn btn-primary">Quick Start Guide</a>
+        <a href="guide/quickstart.html" class="btn btn-primary">빠른 시작 가이드</a>
         <a href="https://github.com/roboco-io/intent-engineering" class="btn btn-ghost">GitHub</a>
     </div>
 </div>
 
 <div class="translate-bar">
-    <a href="ko/">한국어</a>
-    <a href="zh/">中文</a>
-    <a href="ja/">日本語</a>
+    <a href="../">English</a>
+    <a href="../zh/">中文</a>
+    <a href="../ja/">日本語</a>
 </div>
 
 <footer>
-    Intent Engineering by <a href="https://github.com/roboco-io">roboco-io</a> &middot; 2026 &middot; Ship intent, not code.
+    Intent Engineering by <a href="https://github.com/roboco-io">roboco-io</a> &middot; 2026 &middot; Intent를 전달하라, 코드가 아니라.
 </footer>
 
 </body>

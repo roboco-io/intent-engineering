@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -q '\"file_path\".*docs/[^k][^o].*\\.html\\|\"file_path\".*docs/index\\.html\\|\"file_path\".*docs/guide/'; then if ! echo \"$CLAUDE_TOOL_INPUT\" | grep -qE '\"file_path\".*docs/(ko|zh|ja)/'; then echo '[i18n] English doc modified. Run /translate to update ko/zh/ja pages.'; fi; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

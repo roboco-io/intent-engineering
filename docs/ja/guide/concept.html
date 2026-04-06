@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンセプト — Intent Engineering</title>
+    <style>
+        :root {
+            --bg: #0a0a0a; --surface: #141414; --border: #222;
+            --text: #e5e5e5; --text-muted: #888; --accent: #3b82f6;
+            --green: #22c55e; --red: #ef4444; --purple: #a855f7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav {
+            max-width: 800px; margin: 0 auto; padding: 20px 24px;
+            font-size: 14px; color: var(--text-muted);
+        }
+        .content {
+            max-width: 800px; margin: 0 auto; padding: 40px 24px 100px;
+        }
+        .content h1 {
+            font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;
+        }
+        .content > .subtitle { font-size: 17px; color: var(--text-muted); margin-bottom: 48px; }
+        h2 {
+            font-size: 22px; font-weight: 700; margin: 48px 0 16px;
+            padding-top: 32px; border-top: 1px solid var(--border);
+        }
+        h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+        p { color: var(--text-muted); margin-bottom: 16px; }
+        strong { color: var(--text); }
+
+        pre {
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            padding: 20px 24px; overflow-x: auto; margin: 16px 0 24px;
+            font-family: 'SF Mono', 'Fira Code', monospace; font-size: 14px; line-height: 1.8;
+            color: var(--text-muted);
+        }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface); padding: 2px 6px; border-radius: 4px; font-size: 14px;
+        }
+        pre code { background: none; padding: 0; }
+
+        .callout {
+            background: var(--surface); border-left: 3px solid var(--accent);
+            padding: 20px 24px; margin: 24px 0; border-radius: 0 10px 10px 0;
+        }
+        .callout p { margin-bottom: 0; }
+
+        table {
+            width: 100%; border-collapse: collapse; margin: 16px 0 24px;
+            font-size: 14px;
+        }
+        th, td {
+            text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border);
+        }
+        th { color: var(--text-muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+        td { color: var(--text-muted); }
+
+        .highlight { color: var(--text); }
+
+        .translate-bar {
+            display: flex; justify-content: center; gap: 12px;
+            padding: 16px 24px; border-top: 1px solid var(--border); font-size: 13px;
+        }
+        .translate-bar a {
+            color: var(--text-muted); padding: 4px 10px;
+            border: 1px solid var(--border); border-radius: 6px; transition: all 0.15s;
+        }
+        .translate-bar a:hover { color: var(--text); border-color: var(--text-muted); text-decoration: none; }
+        footer {
+            max-width: 800px; margin: 0 auto; padding: 40px 24px;
+            border-top: 1px solid var(--border); text-align: center;
+            color: var(--text-muted); font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="../index.html">&larr; Intent Engineering</a> / コンセプト
+</div>
+
+<div class="content">
+    <h1>コンセプト</h1>
+    <p class="subtitle">Intent Engineering がなぜ存在するのか、これまでの概念とどう関係するのか、そしてソフトウェアの作り方をどう変えるのか。</p>
+
+    <h2>ボトルネックは移動した</h2>
+
+    <p>50年間、ソフトウェアエンジニアリングは一つの制約に最適化されてきた: <strong>コードを書くことは高くつく</strong>。デザインパターン、コードレビュー、CI/CD、マイクロサービス、アジャイル -- すべて人間がコードを書くコストとリスクを管理するために発明された。</p>
+
+    <p>バイブコーディングはその制約を一夜にして溶解させた。AIエージェントは今や、どんな人間のチームよりも速くコードを生成し、レビューし、テストし、デプロイできる。6ヶ月で10,000コミットを出荷するスタッフSWEはもはやSFではない -- それは普通の火曜日である。</p>
+
+    <p>しかし新たなボトルネックが現れた: <strong>Intent</strong>。コードが無料になったとき、希少な資源は何を作るか、なぜ作るか、何を作らないかを知ることになった。明確な Intent がなければ、AIは技術的には正しいが戦略的には無用なアウトプットの山を生み出す。</p>
+
+    <div class="callout">
+        <p>Intent Engineering はこのシフトを受け入れるパラダイムである。すべての人的努力を Intent の正確な文書化に集中させ、下流のすべて -- 仕様生成、実装、検証、デプロイ -- をAIに委ねる。</p>
+    </div>
+
+    <h2>Intent Engineering でないもの</h2>
+
+    <p>それは<strong>プロンプトエンジニアリングではない</strong>。プロンプトエンジニアリングは単一セッションでAIとの対話を最適化する。Intent Engineering は、すべてのセッションを形作る永続的で進化するドキュメントを定義する。</p>
+
+    <p>それは<strong>設計ドキュメントではない</strong>。設計ドキュメントは何かの作り方を規定する: アーキテクチャ、技術スタック、タイムライン、マイルストーン。Intent Document は明示的に How を排除する。実装の判断はAIの領域である。</p>
+
+    <p>それは<strong>PRDではない</strong>。プロダクト要求仕様書は包括的で静的である。Intent Document は最小限で生きている。探索を通じて進化し、終了させることもできる。</p>
+
+    <p>それは<strong>フレームワークやツールではない</strong>。マークダウンファイルと規律である。依存関係ゼロで、今日からどんなプロジェクトでも採用できる。</p>
+
+    <h2>3つのレイヤー</h2>
+
+    <p>Intent Document はちょうど3つのコンテンツレイヤーを持つ。これを超えるものはAIを混乱させ、人間の注意を浪費するノイズである。</p>
+
+    <h3>Why -- これが存在する理由</h3>
+
+    <p>解決すべき課題、成功した場合の目標、成功の測定方法。探索フェーズでは、Why は仮説 -- 間違っているかもしれない賭け -- である。clarified フェーズでは、Why はエビデンスに裏打ちされた確信である。Why が根本的に変わればそれはピボットであり、稀かつ意図的であるべきだ。</p>
+
+    <h3>What -- 作るもの</h3>
+
+    <p>機能、ユーザーフロー、エッジケース。AIがタスクを導出できるほど具体的に書くが、実装については決して指示しない。「ユーザーはレポートをPDFとしてエクスポートできる」は良い。「puppeteerを使ってヘッドレスChromeでPDFを生成する」は How であり、ここには属さない。</p>
+
+    <h3>Not -- 越えてはならない境界</h3>
+
+    <p>これは最も過小評価されているレイヤーである。セキュリティ制約、スコープの限界、品質基準、禁止パターン。Not がなければ、AIはあなたの暗黙の前提に違反する一見合理的な判断を下す。「本番キーをローカルに保存しない。」「any型は禁止。」「モバイルはスコープ外。」これらの線があなたをAIの楽観的な親切心から守る。</p>
+
+    <h2>Learnings -- 進化のエンジン</h2>
+
+    <p>最初から何が欲しいか分かっている人はめったにいない。アイデアは seed として始まる -- 曖昧で、不確実で、仮定に満ちている。明確さへの道は<strong>探索</strong>を通じて進む: プロトタイプの構築、ユーザーインタビュー、競合の調査、素早い失敗。</p>
+
+    <p>Learnings はこれらの探索とその結果のタイムスタンプ付きログである。各エントリには何を試み、何を発見し、その結果何が変わったかが記録される。これは二つの目的を果たす:</p>
+
+    <p><strong>人間にとって:</strong> 意思決定の監査証跡を作る。プロジェクトがなぜピボットしたかを振り返るとき、答えは誰かの記憶ではなく Learnings の中にある。</p>
+
+    <p><strong>AIにとって:</strong> どれだけのコードでも提供できないコンテキストを与える。Learnings セクションを読むAIは、プロジェクトが何であるかだけでなく、どうやってそこに至ったか、すでに何が試されたかを理解する。</p>
+
+    <h2>ライフサイクル</h2>
+
+    <p>Intent は静的ではない。4つの状態を遷移する:</p>
+
+    <table>
+        <tr><th>状態</th><th>説明</th><th>すべきこと</th></tr>
+        <tr>
+            <td class="highlight">seed</td>
+            <td>単なるアイデア。Why は推測、What/Not は空または曖昧。</td>
+            <td>仮説を書く。最初の実験を始める。</td>
+        </tr>
+        <tr>
+            <td class="highlight">exploring</td>
+            <td>プロトタイプ、リサーチ、インタビューを通じて仮説を積極的にテスト中。</td>
+            <td>実験を実行する。学びを記録する。進みながら Why/What/Not を更新する。</td>
+        </tr>
+        <tr>
+            <td class="highlight">clarified</td>
+            <td>3つのレイヤーすべてが確信を持って埋められている。不確実性マーカーなし。</td>
+            <td>AIに引き渡す。構築する。</td>
+        </tr>
+        <tr>
+            <td class="highlight">killed</td>
+            <td>エビデンスにより構築する価値がないと判明、または既存のソリューションがカバーしている。</td>
+            <td>理由を記録する。先に進む。これは良い結果である。</td>
+        </tr>
+    </table>
+
+    <p>最も重要な遷移は <strong>どの状態からでも → killed</strong> である。いつ止めるかを知ることは、いつ始めるかを知ることより難しい。よく文書化された終了は何ヶ月もの無駄な努力を節約し、同じ行き止まりが再び探索されることを防ぐ。</p>
+
+    <h2>既存の概念との関係</h2>
+
+    <table>
+        <tr><th>概念</th><th>スコープ</th><th>Intent Engineering との関係</th></tr>
+        <tr>
+            <td class="highlight">Context Engineering</td>
+            <td>タスク単位、一時的</td>
+            <td>Intent Document はすべてのタスクをフレーミングするトップレベルのコンテキストになる。</td>
+        </tr>
+        <tr>
+            <td class="highlight">Harness Engineering</td>
+            <td>ツールと環境のセットアップ</td>
+            <td>Not レイヤーがハーネスルール (CLAUDE.md、リンター、CIチェック) の信頼できる唯一の情報源となる。</td>
+        </tr>
+        <tr>
+            <td class="highlight">Spec-driven Development</td>
+            <td>機能仕様</td>
+            <td>仕様は What レイヤーから自動導出される。人間がそれを書くことはなくなる。</td>
+        </tr>
+        <tr>
+            <td class="highlight">Vibe Coding</td>
+            <td>コード生成</td>
+            <td>バイブコーディングは Intent が明確なとき最大限に効果を発揮する。Intent Engineering がその明確さを提供する。</td>
+        </tr>
+    </table>
+
+    <h2>自動化パイプライン</h2>
+
+    <p>Intent Engineering が完全に稼働すると、人間がパイプラインで触れるのは2点だけ: 最上流 (Intent を書く) と最下流 (結果を評価し Intent を更新する) である。</p>
+
+    <pre><code>  [Intent Document]     ← 人間が書き維持する
+         ↓
+  [Spec Generation]     ← AIが Why/What/Not からタスクリストを導出する
+         ↓
+  [Implementation]      ← AIエージェントが並列でコードを書く
+         ↓
+  [Verification]        ← AIがクロスレビュー、テスト、リントを行う
+         ↓
+  [Deployment]          ← CI/CDがリリースを自動化する
+         ↓
+  [Feedback]            ← ユーザーデータがフィードバックされる
+         ↓
+  [Learn & Decide]      ← 人間が評価し、Intent を更新または終了する</code></pre>
+
+    <p>Intent とフィードバックの間のすべては今日自動化可能である。コンテキストエンジニアリング、ハーネスエンジニアリング、仕様作成 -- すべてよく書かれた Intent Document から導出できる。人間の還元不可能な仕事は、<strong>何が重要か</strong>と<strong>何を学んだか</strong>を決めることである。</p>
+
+    <h2>なぜ機能するのか</h2>
+
+    <p><strong>制約が創造性を生む。</strong> ドキュメントを Why/What/Not に限定することで、本当に重要なことを考えることを強制する。他のあらゆるフォーマット -- PRD、設計ドキュメント、プロジェクト計画 -- は詳細の裏に隠れることを許す。Intent Engineering は隠れる場所を残さない。</p>
+
+    <p><strong>AIはあなたより How が得意である。</strong> AIはあらゆるアーキテクチャパターン、あらゆるフレームワークのドキュメント、あらゆるStack Overflowの回答を読んでいる。実装方法を指示することはAIをあなたの知識に制限する。達成すべきことを伝えることはAIの全能力を解放する。</p>
+
+    <p><strong>終了は生産的である。</strong> ほとんどのエンジニアリング文化は放棄されたプロジェクトを失敗として扱う。Intent Engineering は文書化された終了を学習資産として扱う。killed されたプロジェクトの Learnings セクションは、出荷されたプロジェクトのコードより価値があるかもしれない。</p>
+
+    <p><strong>Intent の精度はスケールする。</strong> Why セクションの一つの明確な文 -- 「新規ユーザーが30秒以内に最初の価値を体験する」 -- がAI生成のすべてのタスク、すべてのコードレビュー、すべてのテストに伝播する。曖昧な Intent は曖昧なコードを生む。鋭い Intent は鋭いシステムを生む。</p>
+
+    <h2>はじめ方</h2>
+
+    <p>プロジェクトのルートに <code>INTENT.md</code> というファイルを作成する。Why を記入する。What と Not について正直に書く -- 不明点は <code>(?)</code> で印を付ける。探索を始める。学んだことを記録する。エビデンスが求めるときに更新するか終了する。</p>
+
+    <p>これが Intent Engineering である。インストールするフレームワークはない。設定するツールもない。自分が何を望んでいるかを知り、それを書き留める規律だけである。</p>
+
+    <p><a href="quickstart.html">→ クイックスタートガイド</a></p>
+</div>
+
+<div class="translate-bar">
+    <a href="../../guide/concept.html">English</a>
+    <a href="../../ko/guide/concept.html">한국어</a>
+    <a href="../../zh/guide/concept.html">中文</a>
+</div>
+
+<footer>
+    <a href="../index.html">Intent Engineering</a> &middot; <a href="quickstart.html">クイックスタート</a> &middot; <a href="https://github.com/roboco-io/intent-engineering">GitHub</a>
+</footer>
+
+</body>
+</html>
