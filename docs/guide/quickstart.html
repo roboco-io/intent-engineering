@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start — Intent Engineering</title>
+    <style>
+        :root {
+            --bg: #0a0a0a; --surface: #141414; --border: #222;
+            --text: #e5e5e5; --text-muted: #888; --accent: #3b82f6;
+            --green: #22c55e; --red: #ef4444; --purple: #a855f7; --yellow: #eab308;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .nav {
+            max-width: 800px; margin: 0 auto; padding: 20px 24px;
+            font-size: 14px; color: var(--text-muted);
+        }
+
+        .content {
+            max-width: 800px; margin: 0 auto; padding: 40px 24px 100px;
+        }
+        .content h1 {
+            font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;
+        }
+        .content > .subtitle {
+            font-size: 17px; color: var(--text-muted); margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 22px; font-weight: 700; margin: 48px 0 16px;
+            padding-top: 32px; border-top: 1px solid var(--border);
+        }
+        h2:first-of-type { border: none; padding-top: 0; margin-top: 0; }
+        h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+        p { color: var(--text-muted); margin-bottom: 16px; }
+
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 28px; height: 28px; border-radius: 8px;
+            background: var(--accent); color: #fff; font-size: 14px; font-weight: 700;
+            margin-right: 8px; flex-shrink: 0;
+        }
+        .step-title { display: flex; align-items: center; margin-bottom: 16px; }
+        .step-title h2 { margin: 0; padding: 0; border: none; }
+
+        pre {
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            padding: 20px 24px; overflow-x: auto; margin: 16px 0 24px;
+            font-family: 'SF Mono', 'Fira Code', monospace; font-size: 14px; line-height: 1.8;
+            color: var(--text-muted);
+        }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface); padding: 2px 6px; border-radius: 4px; font-size: 14px;
+        }
+        pre code { background: none; padding: 0; }
+
+        .tip {
+            background: #0f1a2e; border: 1px solid #1e3a5f; border-radius: 10px;
+            padding: 16px 20px; margin: 16px 0; font-size: 14px;
+        }
+        .tip strong { color: var(--accent); }
+
+        .template-block {
+            background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+            padding: 24px; margin: 16px 0 24px;
+        }
+        .template-block h4 {
+            font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em;
+            color: var(--text-muted); margin-bottom: 12px;
+        }
+        .template-block pre {
+            background: none; border: none; padding: 0; margin: 0;
+        }
+
+        .status-badge {
+            display: inline-block; padding: 2px 10px; border-radius: 6px;
+            font-size: 13px; font-weight: 600;
+        }
+        .sb-seed { background: #1e293b; color: #94a3b8; }
+        .sb-exploring { background: #1e3a5f; color: var(--accent); }
+        .sb-clarified { background: #14532d; color: var(--green); }
+        .sb-killed { background: #450a0a; color: var(--red); }
+
+        footer {
+            max-width: 800px; margin: 0 auto; padding: 40px 24px;
+            border-top: 1px solid var(--border); text-align: center;
+            color: var(--text-muted); font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="../index.html">&larr; Intent Engineering</a> / Quick Start
+</div>
+
+<div class="content">
+    <h1>Quick Start</h1>
+    <p class="subtitle">Create your first Intent Document in 5 minutes. No tools required — just a markdown file.</p>
+
+    <!-- Step 1 -->
+    <div class="step-title">
+        <span class="step-num">1</span>
+        <h2>Pick your starting state</h2>
+    </div>
+
+    <p>Be honest about where you are. There's no wrong answer.</p>
+
+    <div class="template-block">
+        <h4>Choose one</h4>
+        <pre><code><span style="color:#94a3b8">seed</span>        "I have an idea but nothing concrete"
+<span style="color:#3b82f6">exploring</span>   "I have a direction but need to validate"
+<span style="color:#22c55e">clarified</span>   "I know exactly what to build"</code></pre>
+    </div>
+
+    <div class="tip">
+        <strong>Tip:</strong> Most people start at <span class="status-badge sb-seed">seed</span> or <span class="status-badge sb-exploring">exploring</span>. Starting at <span class="status-badge sb-clarified">clarified</span> when you're not actually sure is the fastest way to build the wrong thing.
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-title">
+        <span class="step-num">2</span>
+        <h2>Create INTENT.md</h2>
+    </div>
+
+    <p>Create a file called <code>INTENT.md</code> at the root of your project. Copy the template below and fill it in.</p>
+
+    <h3>If you're in seed or exploring:</h3>
+    <pre><code># INTENT — [Project Name]
+
+> status: seed
+
+## Why
+
+Problem: [Who is suffering, and how?]
+Hypothesis: [What do you think will fix it? It's OK to be wrong.]
+Validation: [How will you know if the hypothesis is right?]
+
+## What
+
+[Leave empty if seed. Write what you want to verify if exploring.]
+
+- [ ] [Feature 1 — one line]
+- [ ] [Feature 2 — one line]
+
+## Not
+
+[Write whatever comes to mind. Add (?) if unsure.]
+
+- [e.g., No mobile app for now]
+- [e.g., Never send user data to third parties]
+
+## Learnings
+
+[Empty for now. You'll fill this as you explore.]</code></pre>
+
+    <h3>If you're clarified:</h3>
+    <pre><code># INTENT — [Project Name]
+
+> status: clarified
+
+## Why
+
+Problem: [Who is suffering, and how?]
+Goal: [What does success look like?]
+Metric: [How do you measure it? Use numbers.]
+Customer quote: [What would a happy user tell a friend? One sentence.]
+
+## What
+
+- [ ] [Feature 1 — one line]
+- [ ] [Feature 2 — one line]
+- [ ] [Feature 3 — one line]
+
+User flow:
+1. User does [A]
+2. System does [B]
+3. Result: [C]
+
+Edge cases:
+- [Case 1]
+- [Case 2]
+
+## Not
+
+- Forbidden: [Hard security/ethical lines]
+- Tech constraints: [e.g., no `any` types, TypeScript only]
+- Out of scope: [What we're explicitly not building]
+- Quality bar: [e.g., response time under 200ms]
+
+## Learnings
+
+- [Date] [What you tried] — [What you learned]</code></pre>
+
+    <!-- Step 3 -->
+    <div class="step-title">
+        <span class="step-num">3</span>
+        <h2>Explore and learn</h2>
+    </div>
+
+    <p>This is where Intent Engineering diverges from traditional spec writing. You don't just write the document and hand it off. You <strong>iterate on the intent itself</strong>.</p>
+
+    <p>Every time you learn something — from a prototype, a user interview, a competitor analysis, or even a failed experiment — add it to Learnings:</p>
+
+    <pre><code>## Learnings
+
+- [2026-04-01] Built prototype v1 — users ignored the dashboard, went straight to export
+- [2026-04-03] Interviewed 5 SMBs — the real pain is invoice tracking, not analytics
+- [2026-04-05] Found existing tool X — covers 80% of what we planned. Pivot to the 20% gap.</code></pre>
+
+    <p>Then update Why / What / Not based on what you learned. The document evolves. That's the point.</p>
+
+    <div class="tip">
+        <strong>Tip:</strong> Each learning should change something. If you learned something but nothing in Why/What/Not changed, either the learning wasn't significant, or you're not updating the document.
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-title">
+        <span class="step-num">4</span>
+        <h2>Transition states</h2>
+    </div>
+
+    <p>Move to the next state when you're ready — or kill the project when evidence says so.</p>
+
+    <div class="template-block">
+        <h4>State transitions</h4>
+        <pre><code><span style="color:#94a3b8">seed</span> → <span style="color:#3b82f6">exploring</span>
+  When: You start your first experiment.
+
+<span style="color:#3b82f6">exploring</span> → <span style="color:#22c55e">clarified</span>
+  When: Why/What/Not are all filled with conviction. No (?) marks remain.
+
+<span style="color:#94a3b8">any state</span> → <span style="color:#ef4444">killed</span>
+  When: Evidence shows this isn't worth building,
+        or an existing solution covers it.
+  Action: Record why in Learnings. This is valuable knowledge.</code></pre>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-title">
+        <span class="step-num">5</span>
+        <h2>Hand off to AI</h2>
+    </div>
+
+    <p>Once your intent is <span class="status-badge sb-clarified">clarified</span>, AI has everything it needs. The Intent Document becomes the top-level context for your AI agents.</p>
+
+    <p>If you're using Claude Code, extract the coding rules from Not into your <code>CLAUDE.md</code>:</p>
+
+    <pre><code># CLAUDE.md
+
+## Intent Constraints
+- TypeScript only, no `any` types
+- Never modify user data without explicit confirmation
+- Response time under 200ms for all API endpoints</code></pre>
+
+    <p>Then let AI derive tasks, write code, review its own work, and deploy. You monitor, learn from feedback, and update the intent when the world changes.</p>
+
+    <div class="tip">
+        <strong>That's it.</strong> Intent Engineering is not a framework you install. It's a file you maintain. The power is in the discipline of writing Why/What/Not and nothing else.
+    </div>
+
+</div>
+
+<footer>
+    <a href="../index.html">Intent Engineering</a> &middot; <a href="concept.html">Full Concept</a> &middot; <a href="https://github.com/roboco-io/intent-engineering">GitHub</a>
+</footer>
+
+</body>
+</html>
