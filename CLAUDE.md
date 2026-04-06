@@ -59,7 +59,8 @@ git push origin main
 - **English is the source of truth** — all content is authored in English first
 - Static translation pages under `docs/ko/`, `docs/zh/`, `docs/ja/` mirror the English file structure
 - Run `/translate` to regenerate translations after editing English sources (hook reminds you automatically)
-- Technical terms (Intent, seed, exploring, clarified, killed, etc.) must remain untranslated
+- Technical terms (seed, exploring, clarified, killed, etc.) must remain untranslated
+- Exception: Korean (ko) uses '의도' instead of 'Intent'; other languages keep 'Intent' as-is
 - Each page footer has a translate-bar linking to the other language versions
 - When adding a new English page, add corresponding pages in all 3 language directories
 
