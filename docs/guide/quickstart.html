@@ -114,15 +114,15 @@
 
 <div class="content">
     <h1>Quick Start</h1>
-    <p class="subtitle">Create your first Intent Document in 5 minutes. No tools required — just a markdown file.</p>
+    <p class="subtitle">Start with intent. Everything else is choice.</p>
 
     <!-- Step 1 -->
     <div class="step-title">
         <span class="step-num">1</span>
-        <h2>Pick your starting state</h2>
+        <h2>Choose a state</h2>
     </div>
 
-    <p>Be honest about where you are. There's no wrong answer.</p>
+    <p>Choose the state that matches reality.</p>
 
     <div class="template-block">
         <h4>Choose one</h4>
@@ -132,7 +132,7 @@
     </div>
 
     <div class="tip">
-        <strong>Tip:</strong> Most people start at <span class="status-badge sb-seed">seed</span> or <span class="status-badge sb-exploring">exploring</span>. Starting at <span class="status-badge sb-clarified">clarified</span> when you're not actually sure is the fastest way to build the wrong thing.
+        <strong>Tip:</strong> Start at <span class="status-badge sb-seed">seed</span> or <span class="status-badge sb-exploring">exploring</span>. Calling it <span class="status-badge sb-clarified">clarified</span> too early is how you build the wrong thing.
     </div>
 
     <!-- Step 2 -->
@@ -141,9 +141,9 @@
         <h2>Create INTENT.md</h2>
     </div>
 
-    <p>Create a file called <code>INTENT.md</code> at the root of your project. Copy the template below and fill it in.</p>
+    <p>Put <code>INTENT.md</code> at the project root. Fill the matching template.</p>
 
-    <h3>If you're in seed or exploring:</h3>
+    <h3>For seed or exploring:</h3>
     <pre><code># INTENT — [Project Name]
 
 > status: seed
@@ -172,7 +172,7 @@ Validation: [How will you know if the hypothesis is right?]
 
 [Empty for now. You'll fill this as you explore.]</code></pre>
 
-    <h3>If you're clarified:</h3>
+    <h3>For clarified:</h3>
     <pre><code># INTENT — [Project Name]
 
 > status: clarified
@@ -213,12 +213,12 @@ Edge cases:
     <!-- Step 3 -->
     <div class="step-title">
         <span class="step-num">3</span>
-        <h2>Explore and learn</h2>
+        <h2>Explore, record, update</h2>
     </div>
 
-    <p>This is where Intent Engineering diverges from traditional spec writing. You don't just write the document and hand it off. You <strong>iterate on the intent itself</strong>.</p>
+    <p>Intent is not static. Experiment, then update it.</p>
 
-    <p>Every time you learn something — from a prototype, a user interview, a competitor analysis, or even a failed experiment — add it to Learnings:</p>
+    <p>Record each useful result in Learnings:</p>
 
     <pre><code>## Learnings
 
@@ -226,19 +226,19 @@ Edge cases:
 - [2026-04-03] Interviewed 5 SMBs — the real pain is invoice tracking, not analytics
 - [2026-04-05] Found existing tool X — covers 80% of what we planned. Pivot to the 20% gap.</code></pre>
 
-    <p>Then update Why / What / Not based on what you learned. The document evolves. That's the point.</p>
+    <p>Then update Why / What / Not.</p>
 
     <div class="tip">
-        <strong>Tip:</strong> Each learning should change something. If you learned something but nothing in Why/What/Not changed, either the learning wasn't significant, or you're not updating the document.
+        <strong>Tip:</strong> If a learning changes nothing in Why / What / Not, it probably does not matter yet.
     </div>
 
     <!-- Step 4 -->
     <div class="step-title">
         <span class="step-num">4</span>
-        <h2>Transition states</h2>
+        <h2>Change state</h2>
     </div>
 
-    <p>Move to the next state when you're ready — or kill the project when evidence says so.</p>
+    <p>Advance when evidence supports it. Kill when it doesn't.</p>
 
     <div class="template-block">
         <h4>State transitions</h4>
@@ -260,9 +260,9 @@ Edge cases:
         <h2>Hand off to AI</h2>
     </div>
 
-    <p>Once your intent is <span class="status-badge sb-clarified">clarified</span>, AI has everything it needs. The Intent Document becomes the top-level context for your AI agents.</p>
+    <p>Once intent is <span class="status-badge sb-clarified">clarified</span>, <code>INTENT.md</code> is enough context for AI.</p>
 
-    <p>If you're using Claude Code, extract the coding rules from Not into your <code>CLAUDE.md</code>:</p>
+    <p>If you use Claude Code, move the constraints from Not into <code>CLAUDE.md</code>:</p>
 
     <pre><code># CLAUDE.md
 
@@ -271,10 +271,10 @@ Edge cases:
 - Never modify user data without explicit confirmation
 - Response time under 200ms for all API endpoints</code></pre>
 
-    <p>Then let AI derive tasks, write code, review its own work, and deploy. You monitor, learn from feedback, and update the intent when the world changes.</p>
+    <p>Let AI derive tasks, write code, review, and deploy. Update intent when reality changes.</p>
 
     <div class="tip">
-        <strong>That's it.</strong> Intent Engineering is not a framework you install. It's a file you maintain. The power is in the discipline of writing Why/What/Not and nothing else.
+        <strong>That's it.</strong> Keep <code>INTENT.md</code> current. Everything else is choice.
     </div>
 
 </div>

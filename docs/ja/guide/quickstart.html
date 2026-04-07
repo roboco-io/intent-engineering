@@ -114,25 +114,25 @@
 
 <div class="content">
     <h1>クイックスタート</h1>
-    <p class="subtitle">5分で最初の Intent Document を作成しよう。ツールは不要 -- マークダウンファイルだけでよい。</p>
+    <p class="subtitle">Intentから始めよう。それ以外はすべて選択である。</p>
 
     <!-- Step 1 -->
     <div class="step-title">
         <span class="step-num">1</span>
-        <h2>開始状態を選ぶ</h2>
+        <h2>状態を選ぶ</h2>
     </div>
 
-    <p>自分が今どこにいるか正直に判断しよう。間違いはない。</p>
+    <p>現実に合った状態を選ぶ。</p>
 
     <div class="template-block">
         <h4>一つ選択</h4>
         <pre><code><span style="color:#94a3b8">seed</span>        「アイデアはあるが、まだ具体的ではない」
 <span style="color:#3b82f6">exploring</span>   「方向性はあるが、検証が必要」
-<span style="color:#22c55e">clarified</span>   「何を作るか正確に分かっている」</code></pre>
+<span style="color:#22c55e">clarified</span>   「何を作るか正確にわかっている」</code></pre>
     </div>
 
     <div class="tip">
-        <strong>ヒント:</strong> ほとんどの人は <span class="status-badge sb-seed">seed</span> か <span class="status-badge sb-exploring">exploring</span> から始める。実際には確信がないのに <span class="status-badge sb-clarified">clarified</span> から始めることは、間違ったものを最速で作る方法である。
+        <strong>ヒント：</strong> <span class="status-badge sb-seed">seed</span> か <span class="status-badge sb-exploring">exploring</span> から始めよう。早すぎる段階で <span class="status-badge sb-clarified">clarified</span> とすることは、間違ったものを作る原因になる。
     </div>
 
     <!-- Step 2 -->
@@ -141,117 +141,117 @@
         <h2>INTENT.md を作成する</h2>
     </div>
 
-    <p>プロジェクトのルートに <code>INTENT.md</code> というファイルを作成する。以下のテンプレートをコピーして記入しよう。</p>
+    <p>プロジェクトのルートに <code>INTENT.md</code> を置く。対応するテンプレートを記入する。</p>
 
-    <h3>seed または exploring の場合:</h3>
+    <h3>seed または exploring の場合：</h3>
     <pre><code># INTENT — [Project Name]
 
 > status: seed
 
 ## Why
 
-Problem: [誰が、どのように困っているか?]
-Hypothesis: [何がそれを解決すると思うか? 間違っていても構わない。]
-Validation: [仮説が正しいかどうか、どうやって判断するか?]
+Problem: [Who is suffering, and how?]
+Hypothesis: [What do you think will fix it? It's OK to be wrong.]
+Validation: [How will you know if the hypothesis is right?]
 
 ## What
 
-[seed の場合は空欄のままにする。exploring の場合は検証したい内容を書く。]
+[Leave empty if seed. Write what you want to verify if exploring.]
 
-- [ ] [機能1 -- 一行で]
-- [ ] [機能2 -- 一行で]
+- [ ] [Feature 1 — one line]
+- [ ] [Feature 2 — one line]
 
 ## Not
 
-[思いつくことを書く。不確かな場合は (?) を付ける。]
+[Write whatever comes to mind. Add (?) if unsure.]
 
-- [例: 今のところモバイルアプリは作らない]
-- [例: ユーザーデータを第三者に送信しない]
+- [e.g., No mobile app for now]
+- [e.g., Never send user data to third parties]
 
 ## Learnings
 
-[今は空欄。探索しながら記入していく。]</code></pre>
+[Empty for now. You'll fill this as you explore.]</code></pre>
 
-    <h3>clarified の場合:</h3>
+    <h3>clarified の場合：</h3>
     <pre><code># INTENT — [Project Name]
 
 > status: clarified
 
 ## Why
 
-Problem: [誰が、どのように困っているか?]
-Goal: [成功とはどのような状態か?]
-Metric: [どう測定するか? 数値を使う。]
-Customer quote: [満足したユーザーが友人に何と言うか? 一文で。]
+Problem: [Who is suffering, and how?]
+Goal: [What does success look like?]
+Metric: [How do you measure it? Use numbers.]
+Customer quote: [What would a happy user tell a friend? One sentence.]
 
 ## What
 
-- [ ] [機能1 -- 一行で]
-- [ ] [機能2 -- 一行で]
-- [ ] [機能3 -- 一行で]
+- [ ] [Feature 1 — one line]
+- [ ] [Feature 2 — one line]
+- [ ] [Feature 3 — one line]
 
 User flow:
-1. ユーザーが [A] を行う
-2. システムが [B] を行う
-3. 結果: [C]
+1. User does [A]
+2. System does [B]
+3. Result: [C]
 
 Edge cases:
-- [ケース1]
-- [ケース2]
+- [Case 1]
+- [Case 2]
 
 ## Not
 
-- Forbidden: [セキュリティ/倫理上のハードライン]
-- Tech constraints: [例: `any` 型禁止、TypeScript のみ]
-- Out of scope: [明示的に作らないもの]
-- Quality bar: [例: レスポンスタイム200ms以内]
+- Forbidden: [Hard security/ethical lines]
+- Tech constraints: [e.g., no `any` types, TypeScript only]
+- Out of scope: [What we're explicitly not building]
+- Quality bar: [e.g., response time under 200ms]
 
 ## Learnings
 
-- [日付] [試したこと] -- [学んだこと]</code></pre>
+- [Date] [What you tried] — [What you learned]</code></pre>
 
     <!-- Step 3 -->
     <div class="step-title">
         <span class="step-num">3</span>
-        <h2>探索して学ぶ</h2>
+        <h2>探索し、記録し、更新する</h2>
     </div>
 
-    <p>ここが Intent Engineering が従来の仕様書作成と分岐するポイントである。ドキュメントを書いて渡して終わりではない。<strong>Intent そのものを反復的に改善する</strong>のである。</p>
+    <p>Intentは静的ではない。実験し、それから更新する。</p>
 
-    <p>何かを学ぶたびに -- プロトタイプ、ユーザーインタビュー、競合分析、あるいは失敗した実験からでも -- Learnings に追記する:</p>
+    <p>有用な結果が出るたびにLearningsに記録する：</p>
 
     <pre><code>## Learnings
 
-- [2026-04-01] プロトタイプv1を構築 -- ユーザーはダッシュボードを無視し、エクスポートに直行した
-- [2026-04-03] 中小企業5社にインタビュー -- 本当の課題は分析ではなく請求書追跡だった
-- [2026-04-05] 既存ツールXを発見 -- 計画の80%をカバーしている。残り20%のギャップにピボットする。</code></pre>
+- [2026-04-01] Built prototype v1 — users ignored the dashboard, went straight to export
+- [2026-04-03] Interviewed 5 SMBs — the real pain is invoice tracking, not analytics
+- [2026-04-05] Found existing tool X — covers 80% of what we planned. Pivot to the 20% gap.</code></pre>
 
-    <p>そして学んだことに基づいて Why / What / Not を更新する。ドキュメントは進化する。それがポイントである。</p>
+    <p>そしてWhy / What / Notを更新する。</p>
 
     <div class="tip">
-        <strong>ヒント:</strong> 各学びは何かを変えるべきである。学んだのに Why/What/Not が何も変わらなかった場合、その学びが重要でなかったか、ドキュメントを更新していないかのどちらかである。
+        <strong>ヒント：</strong> 学びがWhy / What / Notの何も変えないなら、おそらくまだ重要ではない。
     </div>
 
     <!-- Step 4 -->
     <div class="step-title">
         <span class="step-num">4</span>
-        <h2>状態を遷移させる</h2>
+        <h2>状態を変更する</h2>
     </div>
 
-    <p>準備ができたら次の状態に移行する -- またはエビデンスがそう示すならプロジェクトを終了する。</p>
+    <p>証拠が裏付けたら進む。裏付けないなら終了する。</p>
 
     <div class="template-block">
         <h4>状態遷移</h4>
         <pre><code><span style="color:#94a3b8">seed</span> → <span style="color:#3b82f6">exploring</span>
-  タイミング: 最初の実験を開始したとき。
+  タイミング：最初の実験を開始したとき。
 
 <span style="color:#3b82f6">exploring</span> → <span style="color:#22c55e">clarified</span>
-  タイミング: Why/What/Not がすべて確信を持って埋められたとき。(?) マークが残っていないこと。
+  タイミング：Why/What/Notがすべて確信を持って埋まったとき。(?)マークが残っていないこと。
 
 <span style="color:#94a3b8">どの状態からでも</span> → <span style="color:#ef4444">killed</span>
-  タイミング: エビデンスにより構築する価値がないと判明したとき、
+  タイミング：証拠により構築する価値がないと判明したとき、
         または既存のソリューションがカバーしているとき。
-  アクション: 理由を Learnings に記録する。これは貴重な知識である。</code></pre>
+  アクション：理由をLearningsに記録する。これは貴重な知識である。</code></pre>
     </div>
 
     <!-- Step 5 -->
@@ -260,9 +260,9 @@ Edge cases:
         <h2>AIに引き渡す</h2>
     </div>
 
-    <p>Intent が <span class="status-badge sb-clarified">clarified</span> になれば、AIは必要なものをすべて手にしている。Intent Document がAIエージェントのトップレベルのコンテキストとなる。</p>
+    <p>Intentが <span class="status-badge sb-clarified">clarified</span> になれば、<code>INTENT.md</code> はAIにとって十分なコンテキストとなる。</p>
 
-    <p>Claude Code を使用している場合、Not からコーディングルールを <code>CLAUDE.md</code> に抽出する:</p>
+    <p>Claude Codeを使っている場合、Notの制約を <code>CLAUDE.md</code> に移す：</p>
 
     <pre><code># CLAUDE.md
 
@@ -271,10 +271,10 @@ Edge cases:
 - Never modify user data without explicit confirmation
 - Response time under 200ms for all API endpoints</code></pre>
 
-    <p>あとはAIにタスク導出、コード作成、自己レビュー、デプロイを任せればよい。あなたはモニタリングし、フィードバックから学び、世界が変化したときに Intent を更新する。</p>
+    <p>AIにタスクの導出、コードの作成、レビュー、デプロイを任せる。現実が変わったらIntentを更新する。</p>
 
     <div class="tip">
-        <strong>以上である。</strong> Intent Engineering はインストールするフレームワークではない。維持するファイルである。その力は Why/What/Not を書き、それ以外は何も書かないという規律にある。
+        <strong>以上である。</strong> <code>INTENT.md</code> を最新に保つこと。それ以外はすべて選択である。
     </div>
 
 </div>

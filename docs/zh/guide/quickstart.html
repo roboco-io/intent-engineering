@@ -114,25 +114,25 @@
 
 <div class="content">
     <h1>快速开始</h1>
-    <p class="subtitle">5 分钟内创建你的第一份 Intent 文档。无需任何工具 -- 只需一个 markdown 文件。</p>
+    <p class="subtitle">从意图开始。其余一切都是选择。</p>
 
     <!-- Step 1 -->
     <div class="step-title">
         <span class="step-num">1</span>
-        <h2>选择你的起始状态</h2>
+        <h2>选择状态</h2>
     </div>
 
-    <p>对你当前所处的阶段坦诚相待。没有错误答案。</p>
+    <p>选择与现实匹配的状态。</p>
 
     <div class="template-block">
         <h4>选择一个</h4>
-        <pre><code><span style="color:#94a3b8">seed</span>        "我有一个想法，但还没有具体内容"
+        <pre><code><span style="color:#94a3b8">seed</span>        "我有一个想法，但没有具体的东西"
 <span style="color:#3b82f6">exploring</span>   "我有一个方向，但需要验证"
-<span style="color:#22c55e">clarified</span>   "我明确知道要构建什么"</code></pre>
+<span style="color:#22c55e">clarified</span>   "我完全清楚要构建什么"</code></pre>
     </div>
 
     <div class="tip">
-        <strong>提示：</strong> 大多数人从 <span class="status-badge sb-seed">seed</span> 或 <span class="status-badge sb-exploring">exploring</span> 开始。在你还不确定时就从 <span class="status-badge sb-clarified">clarified</span> 开始，是构建错误东西的最快方式。
+        <strong>提示：</strong>从 <span class="status-badge sb-seed">seed</span> 或 <span class="status-badge sb-exploring">exploring</span> 开始。过早标为 <span class="status-badge sb-clarified">clarified</span> 只会让你构建错误的东西。
     </div>
 
     <!-- Step 2 -->
@@ -141,116 +141,116 @@
         <h2>创建 INTENT.md</h2>
     </div>
 
-    <p>在项目根目录创建一个名为 <code>INTENT.md</code> 的文件。复制下面的模板并填写。</p>
+    <p>将 <code>INTENT.md</code> 放在项目根目录。填写对应的模板。</p>
 
-    <h3>如果你处于 seed 或 exploring 阶段：</h3>
-    <pre><code># INTENT — [项目名称]
+    <h3>用于 seed 或 exploring：</h3>
+    <pre><code># INTENT — [Project Name]
 
 > status: seed
 
 ## Why
 
-Problem: [谁在受苦，怎么受苦？]
-Hypothesis: [你认为什么能解决它？错了也没关系。]
-Validation: [你怎么知道假设是否正确？]
+Problem: [Who is suffering, and how?]
+Hypothesis: [What do you think will fix it? It's OK to be wrong.]
+Validation: [How will you know if the hypothesis is right?]
 
 ## What
 
-[如果是 seed 则留空。如果是 exploring 则写下你想要验证的内容。]
+[Leave empty if seed. Write what you want to verify if exploring.]
 
-- [ ] [功能 1 -- 一行描述]
-- [ ] [功能 2 -- 一行描述]
+- [ ] [Feature 1 — one line]
+- [ ] [Feature 2 — one line]
 
 ## Not
 
-[写下你想到的任何限制。不确定的加上 (?)。]
+[Write whatever comes to mind. Add (?) if unsure.]
 
-- [例如，暂时不做移动应用]
-- [例如，绝不将用户数据发送给第三方]
+- [e.g., No mobile app for now]
+- [e.g., Never send user data to third parties]
 
 ## Learnings
 
-[暂时为空。你会在探索过程中填写。]</code></pre>
+[Empty for now. You'll fill this as you explore.]</code></pre>
 
-    <h3>如果你已经 clarified：</h3>
-    <pre><code># INTENT — [项目名称]
+    <h3>用于 clarified：</h3>
+    <pre><code># INTENT — [Project Name]
 
 > status: clarified
 
 ## Why
 
-Problem: [谁在受苦，怎么受苦？]
-Goal: [成功是什么样的？]
-Metric: [你如何衡量？用数字。]
-Customer quote: [一个满意的用户会怎么向朋友介绍？一句话。]
+Problem: [Who is suffering, and how?]
+Goal: [What does success look like?]
+Metric: [How do you measure it? Use numbers.]
+Customer quote: [What would a happy user tell a friend? One sentence.]
 
 ## What
 
-- [ ] [功能 1 -- 一行描述]
-- [ ] [功能 2 -- 一行描述]
-- [ ] [功能 3 -- 一行描述]
+- [ ] [Feature 1 — one line]
+- [ ] [Feature 2 — one line]
+- [ ] [Feature 3 — one line]
 
 User flow:
-1. 用户执行 [A]
-2. 系统执行 [B]
-3. 结果：[C]
+1. User does [A]
+2. System does [B]
+3. Result: [C]
 
 Edge cases:
-- [情况 1]
-- [情况 2]
+- [Case 1]
+- [Case 2]
 
 ## Not
 
-- Forbidden: [硬性安全/道德底线]
-- Tech constraints: [例如，不允许 `any` 类型，仅限 TypeScript]
-- Out of scope: [我们明确不构建的内容]
-- Quality bar: [例如，响应时间低于 200ms]
+- Forbidden: [Hard security/ethical lines]
+- Tech constraints: [e.g., no `any` types, TypeScript only]
+- Out of scope: [What we're explicitly not building]
+- Quality bar: [e.g., response time under 200ms]
 
 ## Learnings
 
-- [日期] [你尝试了什么] — [你学到了什么]</code></pre>
+- [Date] [What you tried] — [What you learned]</code></pre>
 
     <!-- Step 3 -->
     <div class="step-title">
         <span class="step-num">3</span>
-        <h2>探索与学习</h2>
+        <h2>探索、记录、更新</h2>
     </div>
 
-    <p>这就是 Intent Engineering 与传统规格编写的分歧之处。你不是写完文档就交出去。你要<strong>对意图本身进行迭代</strong>。</p>
+    <p>Intent 不是静态的。实验，然后更新它。</p>
 
-    <p>每次你从原型、用户访谈、竞品分析甚至失败的实验中学到东西时，都将其添加到 Learnings 中：</p>
+    <p>在 Learnings 中记录每一个有价值的结果：</p>
 
     <pre><code>## Learnings
 
-- [2026-04-01] 构建原型 v1 -- 用户忽略了仪表盘，直接使用导出功能
-- [2026-04-03] 访谈了 5 家中小企业 -- 真正的痛点是发票跟踪，而非分析
-- [2026-04-05] 发现现有工具 X -- 覆盖了我们计划的 80%。转向那 20% 的空白。</code></pre>
+- [2026-04-01] Built prototype v1 — users ignored the dashboard, went straight to export
+- [2026-04-03] Interviewed 5 SMBs — the real pain is invoice tracking, not analytics
+- [2026-04-05] Found existing tool X — covers 80% of what we planned. Pivot to the 20% gap.</code></pre>
 
-    <p>然后根据你学到的内容更新 Why / What / Not。文档是不断演进的。这就是关键。</p>
+    <p>然后更新 Why / What / Not。</p>
 
     <div class="tip">
-        <strong>提示：</strong> 每条学习记录都应该带来改变。如果你学到了什么但 Why/What/Not 没有任何变化，要么这条学习不够重要，要么你没有更新文档。
+        <strong>提示：</strong>如果一条 learning 没有改变 Why / What / Not 中的任何内容，它可能还不重要。
     </div>
 
     <!-- Step 4 -->
     <div class="step-title">
         <span class="step-num">4</span>
-        <h2>状态转换</h2>
+        <h2>变更状态</h2>
     </div>
 
-    <p>当你准备好时进入下一个状态 -- 或者当证据表明时终止项目。</p>
+    <p>当证据支持时推进。当证据不支持时终止。</p>
 
     <div class="template-block">
         <h4>状态转换</h4>
         <pre><code><span style="color:#94a3b8">seed</span> → <span style="color:#3b82f6">exploring</span>
-  当：你开始第一个实验。
+  当：你开始第一个实验时。
 
 <span style="color:#3b82f6">exploring</span> → <span style="color:#22c55e">clarified</span>
-  当：Why/What/Not 都已确信填写完毕。没有 (?) 标记。
+  当：Why/What/Not 都已确信地填写完毕。没有 (?) 标记。
 
-<span style="color:#94a3b8">任何状态</span> → <span style="color:#ef4444">killed</span>
+<span style="color:#94a3b8">any state</span> → <span style="color:#ef4444">killed</span>
   当：证据表明这不值得构建，
-      或已有现成的解决方案。
+        或者现有方案已经覆盖了它。
   操作：在 Learnings 中记录原因。这是宝贵的知识。</code></pre>
     </div>
 
@@ -260,21 +260,21 @@ Edge cases:
         <h2>交给 AI</h2>
     </div>
 
-    <p>一旦你的意图 <span class="status-badge sb-clarified">clarified</span>，AI 就拥有了所需的一切。Intent 文档成为 AI 代理的顶层上下文。</p>
+    <p>一旦意图达到 <span class="status-badge sb-clarified">clarified</span>，<code>INTENT.md</code> 就是 AI 所需的全部上下文。</p>
 
-    <p>如果你使用 Claude Code，将 Not 中的编码规则提取到你的 <code>CLAUDE.md</code> 中：</p>
+    <p>如果你使用 Claude Code，将 Not 中的约束移入 <code>CLAUDE.md</code>：</p>
 
     <pre><code># CLAUDE.md
 
 ## Intent Constraints
-- 仅限 TypeScript，不允许 `any` 类型
-- 未经明确确认，绝不修改用户数据
-- 所有 API 端点的响应时间低于 200ms</code></pre>
+- TypeScript only, no `any` types
+- Never modify user data without explicit confirmation
+- Response time under 200ms for all API endpoints</code></pre>
 
-    <p>然后让 AI 推导任务、编写代码、审查自己的工作并部署。你负责监控、从反馈中学习，并在情况变化时更新意图。</p>
+    <p>让 AI 派生任务、编写代码、审查和部署。当现实发生变化时更新意图。</p>
 
     <div class="tip">
-        <strong>就是这样。</strong> Intent Engineering 不是你需要安装的框架。它是你维护的一个文件。其力量在于编写 Why/What/Not 且仅此而已的纪律。
+        <strong>就是这样。</strong>保持 <code>INTENT.md</code> 最新。其余一切都是选择。
     </div>
 
 </div>

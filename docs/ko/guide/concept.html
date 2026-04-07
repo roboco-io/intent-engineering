@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>컨셉 — Intent Engineering</title>
+    <title>핵심 개념 — 의도 공학</title>
     <style>
         :root {
             --bg: #0a0a0a; --surface: #141414; --border: #222;
@@ -86,152 +86,152 @@
 <body>
 
 <div class="nav">
-    <a href="../index.html">&larr; Intent Engineering</a> / 컨셉
+    <a href="../index.html">&larr; 의도 공학</a> / 핵심 개념
 </div>
 
 <div class="content">
-    <h1>컨셉</h1>
-    <p class="subtitle">Intent Engineering이 왜 존재하는지, 기존 개념들과 어떤 관계가 있는지, 그리고 소프트웨어를 만드는 방식에 무엇을 바꾸는지.</p>
+    <h1>핵심 개념</h1>
+    <p class="subtitle">의도 공학이 왜 존재하는지, 무엇을 거부하는지, 의도가 희소 자원이 되면 무엇이 달라지는지.</p>
 
     <h2>병목이 이동했다</h2>
 
-    <p>50년간 소프트웨어 엔지니어링은 하나의 제약 조건에 최적화되어 왔습니다: <strong>코드 작성은 비용이 많이 든다</strong>. 우리는 디자인 패턴, 코드 리뷰, CI/CD, 마이크로서비스, 애자일을 발명했습니다 — 모두 인간이 코드를 작성하는 비용과 위험을 관리하기 위해서.</p>
+    <p>소프트웨어 공학은 수십 년간 하나의 제약을 최적화했습니다: <strong>인간이 작성하는 코드는 비쌌습니다</strong>. 패턴, 코드 리뷰, CI/CD, 마이크로서비스, 애자일: 모두 희소한 코드를 관리하기 위한 시스템이었습니다.</p>
 
-    <p>바이브 코딩은 그 제약을 하룻밤 사이에 녹여버렸습니다. AI 에이전트는 이제 어떤 인간 팀보다 빠르게 코드를 생성하고, 리뷰하고, 테스트하고, 배포할 수 있습니다. 6개월에 10,000개의 커밋을 올리는 시니어 엔지니어는 더 이상 공상 과학이 아닙니다 — 평범한 화요일입니다.</p>
+    <p>그 제약이 무너졌습니다. AI 에이전트는 이제 코드를 기계 속도로 생성, 리뷰, 테스트, 배포할 수 있습니다.</p>
 
-    <p>하지만 새로운 병목이 등장했습니다: <strong>의도</strong>. 코드가 무료일 때, 희소한 자원은 무엇을 만들지, 왜 만들지, 그리고 무엇을 만들지 않을지 아는 것입니다. 명확한 의도 없이, AI는 기술적으로 정확하지만 전략적으로 쓸모없는 결과물의 산을 만들어냅니다.</p>
+    <p>새로운 병목은 <strong>의도</strong>입니다. 코드가 저렴해지면, 희소 자원은 무엇을 만들지, 왜 중요한지, 무엇을 배제할지 결정하는 것입니다. 그것 없이 AI는 세련된 쓰레기를 만들어냅니다.</p>
 
     <div class="callout">
-        <p>Intent Engineering은 이 전환을 받아들이는 패러다임입니다. 모든 인간의 노력을 의도의 정밀한 문서화에 투입하고, 하류의 모든 것 — 스펙 생성, 구현, 검증, 배포 — 을 AI에게 위임합니다.</p>
+        <p>의도 공학은 이 전환을 받아들입니다: 의도를 제외한 모든 것은 선택입니다. 기술 스택, 아키텍처, 일정. 인간의 역할은 Why, What, Not, Learnings입니다. 나머지는 AI가 처리합니다.</p>
     </div>
 
-    <h2>Intent Engineering이 아닌 것</h2>
+    <h2>의도 공학이 아닌 것</h2>
 
-    <p><strong>프롬프트 엔지니어링이 아닙니다</strong>. 프롬프트 엔지니어링은 단일 세션에서 AI와 대화하는 방식을 최적화합니다. Intent Engineering은 모든 세션을 형성하는 지속적이고 진화하는 문서를 정의합니다.</p>
+    <p><strong>프롬프트 엔지니어링이 아닙니다</strong>: 프롬프트 엔지니어링은 하나의 대화를 조율하지만, 의도 공학은 모든 대화가 상속하는 영속적 문서를 정의합니다.</p>
 
-    <p><strong>설계 문서가 아닙니다</strong>. 설계 문서는 무언가를 어떻게 만들지를 규정합니다: 아키텍처, 기술 스택, 타임라인, 마일스톤. 의도 문서는 How를 명시적으로 배제합니다. 구현 결정은 AI의 영역입니다.</p>
+    <p><strong>설계 문서가 아닙니다</strong>: 설계 문서는 How를 규정하지만, 의도 문서는 How를 거부합니다. 기술 스택, 아키텍처, 일정은 구현 선택이기 때문입니다.</p>
 
-    <p><strong>PRD가 아닙니다</strong>. 제품 요구사항 문서는 포괄적이고 정적입니다. 의도 문서는 최소한이며 살아있습니다. 탐색을 통해 진화하고, killed될 수 있습니다.</p>
+    <p><strong>PRD가 아닙니다</strong>: PRD는 포괄적이고 고정적이지만, 의도 문서는 최소한으로 유지하고, 탐색을 통해 진화하며, 폐기될 수 있습니다.</p>
 
-    <p><strong>프레임워크나 도구가 아닙니다</strong>. 마크다운 파일 하나와 규율입니다. 의존성 없이 오늘 어떤 프로젝트에서든 도입할 수 있습니다.</p>
+    <p><strong>프레임워크나 도구가 아닙니다</strong>: 마크다운 파일 하나와 규율입니다.</p>
 
     <h2>세 개의 레이어</h2>
 
-    <p>의도 문서는 정확히 세 개의 콘텐츠 레이어를 가집니다. 이를 넘어서는 것은 AI를 혼란스럽게 하고 인간의 주의를 낭비하는 노이즈입니다.</p>
+    <p>의도 문서에는 정확히 세 개의 레이어가 있습니다. 인간이 소유하는 것은 Why, What, Not 세 가지뿐이기 때문입니다. 나머지는 모두 구현 선택입니다.</p>
 
-    <h3>Why — 이것이 존재하는 이유</h3>
+    <h3>Why -- 이것이 존재하는 이유</h3>
 
-    <p>해결하려는 문제, 성공했을 때의 목표, 성공을 측정하는 방법. 탐색 단계에서 Why는 가설입니다 — 틀릴 수 있는 배팅. clarified 단계에서 Why는 증거에 뒷받침된 확신입니다. Why가 근본적으로 바뀌면 피벗이며, 드물고 의도적이어야 합니다.</p>
+    <p>Why는 가치에 대한 주장입니다: 누구의 고통이 중요한지, 어떤 결과가 성공인지, 어떤 증거가 마음을 바꿀 수 있는지. seed와 exploring에서는 내기이고, clarified에서는 약속입니다.</p>
 
-    <h3>What — 만들고 있는 것</h3>
+    <h3>What -- 만들고 있는 것</h3>
 
-    <p>기능, 사용자 흐름, 엣지 케이스. AI가 태스크를 도출할 수 있을 만큼 구체적이지만, 구현에 대해서는 절대 지시적이지 않습니다. "사용자가 보고서를 PDF로 내보낼 수 있다"는 좋습니다. "headless Chrome을 통해 puppeteer로 PDF를 생성하라"는 How이며, 여기에 속하지 않습니다.</p>
+    <p>What은 약속의 표면적입니다: 기능, 사용자 흐름, 엣지 케이스. AI가 작업을 도출할 수 있을 만큼 구체적이어야 하지만, How에 대해서는 침묵해야 합니다. "사용자가 보고서를 PDF로 내보낼 수 있다"는 여기에 속하고, "puppeteer를 사용하라"는 속하지 않습니다.</p>
 
-    <h3>Not — 넘어서는 안 되는 경계</h3>
+    <h3>Not -- 넘어서는 안 되는 경계</h3>
 
-    <p>이것은 가장 과소평가된 레이어입니다. 보안 제약, 범위 제한, 품질 기준, 금지된 패턴. Not 없이, AI는 당신의 언급되지 않은 가정을 위반하는 합리적으로 보이는 결정을 내릴 것입니다. "프로덕션 키를 로컬에 절대 저장하지 않는다." "`any` 타입 금지." "모바일은 범위 밖." 이러한 선이 AI의 낙관적인 도움으로부터 당신을 구합니다.</p>
+    <p>Not은 진지함이 드러나는 곳입니다: 보안 제약, 범위 제한, 품질 기준, 금지 패턴. Not이 없으면 AI는 당신이 쓰지 않은 가정에 대해 최적화합니다.</p>
 
-    <h2>Learnings — 진화 엔진</h2>
+    <h2>Learnings -- 진화의 엔진</h2>
 
-    <p>사람들은 처음부터 원하는 것을 거의 알지 못합니다. 아이디어는 seed로 시작합니다 — 막연하고, 불확실하고, 가정으로 가득한. 명확함으로 가는 길은 <strong>탐색</strong>을 통과합니다: 프로토타입 만들기, 사용자 인터뷰, 경쟁사 연구, 빠른 실패.</p>
+    <p>명확함은 보통 늦게 옵니다. 아이디어는 seed로 시작합니다: 모호하고, 취약하고, 흥미로운 방식으로 틀린 상태. 앞으로 나아가는 방법은 <strong>탐색</strong>입니다.</p>
 
-    <p>Learnings는 이러한 탐색과 그 결과에 대한 타임스탬프가 찍힌 로그입니다. 각 항목은 무엇을 시도했는지, 무엇을 발견했는지, 그 결과 무엇이 바뀌었는지를 기록합니다. 이것은 두 가지 목적을 달성합니다:</p>
+    <p>Learnings는 무엇을 시도했는지, 현실이 무엇을 말했는지, 무엇이 바뀌었는지에 대한 타임스탬프 기록입니다.</p>
 
-    <p><strong>인간에게:</strong> 결정의 감사 추적을 만듭니다. 프로젝트가 왜 피벗했는지 돌아볼 때, 답은 누군가의 기억이 아니라 Learnings에 있습니다.</p>
+    <p><strong>인간에게:</strong> 수정주의적 역사를 차단합니다. 프로젝트가 방향을 전환할 때, 이유는 기억이 아닌 Learnings에 있습니다.</p>
 
-    <p><strong>AI에게:</strong> 어떤 양의 코드로도 제공할 수 없는 컨텍스트를 제공합니다. Learnings 섹션을 읽는 AI는 프로젝트가 무엇인지뿐만 아니라, 어떻게 여기까지 왔는지, 이미 무엇을 시도했는지를 이해합니다.</p>
+    <p><strong>AI에게:</strong> 코드가 절대 담을 수 없는 컨텍스트를 전달합니다. 에이전트는 현재의 형태뿐만 아니라 그것을 만들어낸 경로도 봅니다.</p>
 
     <h2>생명주기</h2>
 
-    <p>의도는 정적이지 않습니다. 네 가지 상태를 거쳐 이동합니다:</p>
+    <p>의도는 네 가지 상태를 거칩니다:</p>
 
     <table>
         <tr><th>상태</th><th>설명</th><th>해야 할 일</th></tr>
         <tr>
             <td class="highlight">seed</td>
-            <td>아이디어에 불과함. Why는 추측이고, What/Not은 비어있거나 모호함.</td>
-            <td>가설을 작성하세요. 첫 번째 실험을 시작하세요.</td>
+            <td>아이디어만 있는 상태. Why는 추측이고, What과 Not은 비어 있거나 모호합니다.</td>
+            <td>가설을 작성합니다. 첫 번째 테스트를 실행합니다.</td>
         </tr>
         <tr>
             <td class="highlight">exploring</td>
-            <td>프로토타입, 연구, 인터뷰를 통해 가설을 적극적으로 검증 중.</td>
-            <td>실험을 수행하세요. Learnings를 기록하세요. 진행하면서 Why/What/Not을 업데이트하세요.</td>
+            <td>프로토타입, 리서치, 인터뷰를 통해 가설이 압박받는 상태.</td>
+            <td>실험을 실행합니다. Learnings를 기록합니다. 필요에 따라 Why/What/Not을 재작성합니다.</td>
         </tr>
         <tr>
             <td class="highlight">clarified</td>
-            <td>세 레이어 모두 확신으로 채워짐. 불확실성 표시 없음.</td>
-            <td>AI에게 넘기세요. 만드세요.</td>
+            <td>Why, What, Not이 명시적인 상태. 불확실성 표시가 사라졌습니다.</td>
+            <td>AI에 넘깁니다. 빌드하게 합니다.</td>
         </tr>
         <tr>
             <td class="highlight">killed</td>
-            <td>증거가 만들 가치가 없다고 보여주거나, 기존 솔루션이 이미 커버함.</td>
-            <td>이유를 기록하세요. 넘어가세요. 이것은 좋은 결과입니다.</td>
+            <td>증거가 만들지 말라고 말하거나, 기존 솔루션이 이미 이기고 있는 상태.</td>
+            <td>이유를 기록합니다. 멈춥니다. 이것은 좋은 결과입니다.</td>
         </tr>
     </table>
 
-    <p>가장 중요한 전환은 <strong>모든 상태 → killed</strong>입니다. 언제 멈출지 아는 것은 언제 시작할지 아는 것보다 어렵습니다. 잘 문서화된 종료는 수개월의 낭비를 막고, 같은 막다른 길이 다시 탐색되는 것을 방지합니다.</p>
+    <p>가장 어려운 전환은 <strong>어떤 상태 → killed</strong>입니다. 프로젝트를 시작하는 것은 저렴합니다. 나쁜 프로젝트를 멈추는 것이 판단력입니다.</p>
 
     <h2>기존 개념과의 관계</h2>
 
     <table>
-        <tr><th>개념</th><th>범위</th><th>Intent Engineering과의 관계</th></tr>
+        <tr><th>개념</th><th>범위</th><th>의도 공학과의 관계</th></tr>
         <tr>
             <td class="highlight">Context Engineering</td>
-            <td>태스크별, 일시적</td>
-            <td>의도 문서는 모든 태스크를 프레이밍하는 최상위 컨텍스트가 됩니다.</td>
+            <td>작업별, 일시적</td>
+            <td>의도 문서는 모든 작업 위에 존재하는 영속적 컨텍스트입니다.</td>
         </tr>
         <tr>
             <td class="highlight">Harness Engineering</td>
             <td>도구 및 환경 설정</td>
-            <td>Not 레이어는 하네스 규칙(CLAUDE.md, 린터, CI 체크)의 진실의 원천입니다.</td>
+            <td>Not 레이어는 하네스 규칙으로 컴파일되어야 합니다: CLAUDE.md, 린터, CI.</td>
         </tr>
         <tr>
             <td class="highlight">Spec-driven Development</td>
             <td>기능 명세</td>
-            <td>스펙은 What 레이어에서 자동 도출됩니다. 인간은 더 이상 스펙을 작성하지 않습니다.</td>
+            <td>명세는 What에서 도출됩니다. 인간이 직접 작성하는 것을 멈춥니다.</td>
         </tr>
         <tr>
             <td class="highlight">Vibe Coding</td>
             <td>코드 생성</td>
-            <td>바이브 코딩은 의도가 명확할 때 최대한 효과적입니다. Intent Engineering이 그 명확함을 제공합니다.</td>
+            <td>바이브 코딩은 의도가 날카로울 때만 레버리지를 얻습니다.</td>
         </tr>
     </table>
 
     <h2>자동화 파이프라인</h2>
 
-    <p>Intent Engineering이 완전히 가동되면, 인간은 파이프라인의 두 지점만 터치합니다: 맨 위(의도 작성)와 맨 아래(결과 평가 및 의도 업데이트).</p>
+    <p>성숙한 파이프라인에서 인간이 관여하는 지점은 두 곳입니다: 위쪽의 의도와 아래쪽의 판단.</p>
 
-    <pre><code>  [Intent Document]     ← 인간이 작성하고 유지 관리
+    <pre><code>  [Intent Document]     ← Human writes and maintains
          ↓
-  [Spec Generation]     ← AI가 Why/What/Not에서 태스크 목록을 도출
+  [Spec Generation]     ← AI derives task list from Why/What/Not
          ↓
-  [Implementation]      ← AI 에이전트가 병렬로 코드 작성
+  [Implementation]      ← AI agents write code in parallel
          ↓
-  [Verification]        ← AI가 교차 리뷰, 테스트, 린트 수행
+  [Verification]        ← AI cross-reviews, tests, lints
          ↓
-  [Deployment]          ← CI/CD가 릴리스 자동화
+  [Deployment]          ← CI/CD automates release
          ↓
-  [Feedback]            ← 사용자 데이터가 다시 유입
+  [Feedback]            ← User data flows back
          ↓
-  [Learn & Decide]      ← 인간이 평가하고, Intent를 업데이트하거나 종료</code></pre>
+  [Learn & Decide]      ← Human evaluates, updates intent or kills</code></pre>
 
-    <p>의도와 피드백 사이의 모든 것은 현재 자동화 가능합니다. Context engineering, harness engineering, 스펙 작성 — 모두 잘 작성된 의도 문서에서 도출될 수 있습니다. 인간의 축소 불가능한 역할은 <strong>무엇이 중요한지</strong>와 <strong>무엇을 배웠는지</strong>를 결정하는 것입니다.</p>
+    <p>의도와 피드백 사이의 모든 것은 이제 자동화 가능합니다. 기술 스택, 아키텍처, 작업 분해, 검증 흐름, 배포 주기: 모두 선택입니다. 환원 불가능한 인간의 역할은 Why, What, Not, Learnings입니다.</p>
 
-    <h2>왜 작동하는가</h2>
+    <h2>왜 효과가 있는가</h2>
 
-    <p><strong>제약이 창의성을 낳는다.</strong> 문서를 Why/What/Not으로 제한함으로써, 실제로 중요한 것에 대해 생각하도록 강제합니다. 다른 모든 형식 — PRD, 설계 문서, 프로젝트 계획 — 은 디테일 뒤에 숨을 수 있게 합니다. Intent Engineering은 숨을 곳을 없앱니다.</p>
+    <p><strong>제약이 명확함을 낳습니다.</strong> Why/What/Not은 사람들이 숨는 장소를 제거합니다: 로드맵 연극, 아키텍처 코스프레, 거짓 정밀도. 의도를 깔끔하게 말할 수 없다면, 아직 만들 준비가 되지 않은 것입니다.</p>
 
-    <p><strong>AI는 How에서 당신보다 뛰어나다.</strong> AI는 모든 아키텍처 패턴, 모든 프레임워크 문서, 모든 Stack Overflow 답변을 읽었습니다. 구현 방법을 알려주면 당신의 지식으로 제한됩니다. 달성할 것을 알려주면 AI의 전체 역량을 해방합니다.</p>
+    <p><strong>AI가 당신보다 How를 잘합니다.</strong> AI는 어떤 개별 엔지니어보다 더 넓은 구현 기억을 가지고 있습니다. How를 과도하게 지정하면 솔루션이 당신의 국소 최적에 갇힙니다.</p>
 
-    <p><strong>종료도 생산적이다.</strong> 대부분의 엔지니어링 문화는 포기된 프로젝트를 실패로 취급합니다. Intent Engineering은 문서화된 종료를 학습 자산으로 취급합니다. killed 프로젝트의 Learnings 섹션은 출시된 프로젝트의 코드보다 더 가치 있을 수 있습니다.</p>
+    <p><strong>폐기는 생산적입니다.</strong> 기록된 폐기는 낭비가 아니라 불확실성의 상환입니다. 죽은 프로젝트의 Learnings는 출시된 프로젝트의 코드보다 오래 살아남는 경우가 많습니다.</p>
 
-    <p><strong>의도의 정밀도는 확장된다.</strong> Why 섹션의 명확한 한 문장 — "신규 사용자가 30초 안에 첫 번째 가치를 경험한다" — 은 AI가 생성하는 모든 태스크, 모든 코드 리뷰, 모든 테스트에 전파됩니다. 모호한 의도는 모호한 코드를 만듭니다. 날카로운 의도는 날카로운 시스템을 만듭니다.</p>
+    <p><strong>의도의 정밀도가 확장됩니다.</strong> Why의 날카로운 한 문장이 작업 생성, 리뷰, 테스트, 배포 전반에 전파됩니다. 모호한 의도는 모호함을 증폭하고, 날카로운 의도는 일관성을 증폭합니다.</p>
 
     <h2>시작하기</h2>
 
-    <p>프로젝트 루트에 <code>INTENT.md</code> 파일을 만드세요. Why를 작성하세요. What과 Not에 대해 솔직하게 — 모르는 것은 <code>(?)</code>로 표시하세요. 탐색을 시작하세요. 배운 것을 기록하세요. 증거가 요구할 때 업데이트하거나 종료하세요.</p>
+    <p>프로젝트 루트에 <code>INTENT.md</code>를 만들고 Why, What, Not, Learnings만 작성하세요. 증거가 제거할 때까지 불확실성은 <code>(?)</code>로 표시하세요.</p>
 
-    <p>이것이 Intent Engineering입니다. 설치할 프레임워크도 없습니다. 설정할 도구도 없습니다. 원하는 것을 알고 그것을 적는 규율뿐입니다.</p>
+    <p>구체적인 절차는 빠른 시작 가이드에 있습니다. 규율은 How를 문서에 밀반입하지 않는 것입니다.</p>
 
     <p><a href="quickstart.html">→ 빠른 시작 가이드</a></p>
 </div>
@@ -243,7 +243,7 @@
 </div>
 
 <footer>
-    <a href="../index.html">Intent Engineering</a> &middot; <a href="quickstart.html">빠른 시작</a> &middot; <a href="https://github.com/roboco-io/intent-engineering">GitHub</a>
+    <a href="../index.html">의도 공학</a> &middot; <a href="quickstart.html">빠른 시작</a> &middot; <a href="https://github.com/roboco-io/intent-engineering">GitHub</a>
 </footer>
 
 </body>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intent Engineering -- Intent を届けよ、コードではなく。</title>
-    <meta name="description" content="バイブコーディング時代の実践的パラダイム。Intent を正確に文書化し、それ以外はすべてAIに委ねる。">
+    <title>Intent Engineering — Intentを届けよ、コードではなく。</title>
+    <meta name="description" content="バイブコーディング時代の実践的パラダイム。Intentを正確に記述し、それ以外はすべてAIに委任する。">
     <style>
         :root {
             --bg: #0a0a0a;
@@ -358,43 +358,43 @@
 <body>
 
 <div class="hero">
-    <div class="hero-badge">バイブコーディング時代のパラダイム</div>
-    <h1><span>Intent</span> を届けよ、<br>コードではなく。</h1>
-    <p>Intent を正確に文書化せよ。それ以外はすべてAIに委ねよ。本当に重要なエンジニアリングとは、何を作り、何を作らないかを知ることである。</p>
+    <div class="hero-badge">人間のIntent。AIの実行。</div>
+    <h1><span>Intent</span>を届けよ、<br>コードではなく。</h1>
+    <p>Why、What、Notを定義する。スタック、アーキテクチャ、スケジュール、実装はAIが選ぶ。</p>
     <div class="hero-cta">
-        <a href="guide/quickstart.html" class="btn btn-primary">はじめる</a>
-        <a href="guide/concept.html" class="btn btn-ghost">コンセプトを読む</a>
+        <a href="guide/quickstart.html" class="btn btn-primary">クイックスタート</a>
+        <a href="guide/concept.html" class="btn btn-ghost">コンセプト</a>
     </div>
 </div>
 
 <div class="premise">
-    <blockquote>「コードがボトルネックだったことは一度もない。あなたは何を作るべきかを考えることにほとんどの時間を費やすことになる。」</blockquote>
-    <div class="attr">-- バイブコーディング実践者に転向したスタッフSWE</div>
+    <blockquote>「Intent以外のすべては選択である。」</blockquote>
+    <div class="attr">Why、What、Notはあなたのもの。残りはAIのもの。</div>
 </div>
 
 <!-- The Problem -->
 <section>
-    <h2><span class="num">01 -- </span>課題</h2>
-    <p>バイブコーディングはコード生成を瞬時にした。しかし明確な Intent がなければ、47行の方向性が必要なところにAIは337行の技術仕様を生成してしまう。</p>
+    <h2><span class="num">01 — </span>問題</h2>
+    <p>AIが生成を安価にした。Intentがなければ、そのスピードはノイズになる。Intentがあれば、明確さになる。</p>
     <div class="comparison">
         <div class="comp-card old">
-            <h3>Intent なし</h3>
+            <h3>Intentなし</h3>
             <ul>
-                <li>AIが技術スタック推薦を生成する</li>
-                <li>AIが7週間のタイムラインを作成する</li>
-                <li>AIがユーザーストーリー、用語集、承認シートを作る</li>
+                <li>AIが頼んでもいないスタックを選ぶ</li>
+                <li>AIが誰も必要としないスケジュールを作る</li>
+                <li>AIが仕様、ストーリー、プロセスを肥大化させる</li>
                 <li>8ファイル、3,740行、132KBのノイズ</li>
-                <li>何を作るべきかまだ分からない</li>
+                <li>何を作るべきかまだわからない</li>
             </ul>
         </div>
         <div class="comp-card new">
-            <h3>Intent あり</h3>
+            <h3>Intentあり</h3>
             <ul>
-                <li>Why: なぜこれが存在するのか、1段落で</li>
-                <li>What: 具体的な機能、Howは含まない</li>
-                <li>Not: AIが越えてはならない明確な境界</li>
-                <li>1ファイル、47行、明確さ</li>
-                <li>AIがまさに意図したものを構築する</li>
+                <li>Why：なぜこれが存在しなければならないか</li>
+                <li>What：何が真でなければならないか</li>
+                <li>Not：AIが踏み込めない領域</li>
+                <li>1ファイル、47行、シグナル</li>
+                <li>AIが推測ではなく実行する</li>
             </ul>
         </div>
     </div>
@@ -402,46 +402,46 @@
 
 <!-- The Framework -->
 <section>
-    <h2><span class="num">02 -- </span>フレームワーク</h2>
-    <p>Intent Document は4つのセクションで構成される。それ以上は不要。</p>
+    <h2><span class="num">02 — </span>フレームワーク</h2>
+    <p>Intent Documentには4つのセクションがある。それ以上はない。</p>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-why">Why</span>
-            <h3>なぜこれが存在するのか?</h3>
+            <h3>なぜこれが存在するのか？</h3>
         </div>
-        <p>課題、目標、成功の指標。ここが変わればピボットを意味する。exploring モードではこれは仮説であり、clarified モードではこれは確信である。</p>
+        <p>問題、目標、成功基準を述べる。これが変われば、Intentが変わったということ。</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-what">What</span>
-            <h3>何を作るのか?</h3>
+            <h3>何を作るのか？</h3>
         </div>
-        <p>機能、ユーザーフロー、エッジケース。具体的だが実装について指示しない。技術スタック、アーキテクチャ、タイムラインは書かない。それらはAIの仕事である。</p>
+        <p>機能、フロー、エッジケースを述べる。具体的に、しかしスタック、アーキテクチャ、スケジュールは決して指定しない。</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-not">Not</span>
-            <h3>絶対にやらないことは何か?</h3>
+            <h3>絶対にやらないことは何か？</h3>
         </div>
-        <p>AIが越えてはならないハードな境界。セキュリティ制約、スコープの限界、品質基準、禁止パターン。これが自律的AIを安全にするガードレールである。</p>
+        <p>AIが越えてはならない線を述べる。スコープの制限、セキュリティルール、品質基準、禁止事項。</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-learnings">Learnings</span>
-            <h3>何を発見したか?</h3>
+            <h3>何を発見したか？</h3>
         </div>
-        <p>実験、インタビュー、プロトタイプとその結果の生きたログ。各エントリには日付、試したこと、学んだこと、次のステップが記録される。これが Intent の進化の仕方である。</p>
+        <p>試したこと、学んだこと、変わったことを記録する。これがIntentをより鋭くする方法。</p>
     </div>
 </section>
 
 <!-- The Lifecycle -->
 <section>
-    <h2><span class="num">03 -- </span>ライフサイクル</h2>
-    <p>Intent は一度書いて終わりではない。探索と学びを通じて進化するか、エビデンスがそう示せば消滅する。</p>
+    <h2><span class="num">03 — </span>ライフサイクル</h2>
+    <p>Intentは静的ではない。学びを通じて鋭くなるか、証拠に基づいて消滅する。</p>
 
     <div class="lifecycle">
         <div class="lc-node lc-seed">seed</div>
@@ -454,12 +454,12 @@
     </div>
     <div class="lifecycle" style="margin-top:-20px;">
         <div class="lc-node lc-killed">killed</div>
-        <span style="color:var(--text-muted);font-size:13px;padding-left:12px;">&larr; どの状態からでもここに到達できる。それも良い結果である。</span>
+        <span style="color:var(--text-muted);font-size:13px;padding-left:12px;">&larr; どの状態からでもここに到達できる。それでいい。</span>
     </div>
 
     <div class="codeblock">
 <span class="comment"># INTENT.md</span>
-<span class="key"># INTENT</span> -- Legacy Converter
+<span class="key"># INTENT</span> — Legacy Converter
 
 <span class="comment">> status: exploring</span>
 
@@ -478,22 +478,22 @@
 <span class="val-red">Scope:</span> Node.js/TS only for now
 
 <span class="key">## Learnings</span>
-<span class="val-purple">[2026-04-01]</span> Prototype v1 -- type coverage was the key signal
-<span class="val-purple">[2026-04-05]</span> User interview -- they want CLAUDE.md generation most
+<span class="val-purple">[2026-04-01]</span> Prototype v1 — type coverage was the key signal
+<span class="val-purple">[2026-04-05]</span> User interview — they want CLAUDE.md generation most
     </div>
 </section>
 
 <!-- The Pipeline -->
 <section>
-    <h2><span class="num">04 -- </span>パイプライン</h2>
-    <p>人間が関わるのは最上流と最下流だけ。その間はすべてAIが担う。</p>
+    <h2><span class="num">04 — </span>パイプライン</h2>
+    <p>人間がIntentを定義し、結果を判断する。残りはAIが行う。</p>
 
     <div class="pipeline">
         <div class="pipe-step">
             <div class="pipe-icon pipe-human">&#x270D;</div>
             <div>
-                <div class="pipe-label">Intent を書く</div>
-                <div class="pipe-desc">テンプレートを使って Why / What / Not を記入する</div>
+                <div class="pipe-label">Intentを書く</div>
+                <div class="pipe-desc">Why / What / Not を記述する</div>
             </div>
             <span class="pipe-who who-human">Human</span>
         </div>
@@ -501,7 +501,7 @@
             <div class="pipe-icon pipe-ai">&#x2699;</div>
             <div>
                 <div class="pipe-label">仕様を生成</div>
-                <div class="pipe-desc">AIが Intent Document からタスクリストを導出する</div>
+                <div class="pipe-desc">AIがIntentをタスクに変換する</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
@@ -509,7 +509,7 @@
             <div class="pipe-icon pipe-ai">&#x1F4BB;</div>
             <div>
                 <div class="pipe-label">実装</div>
-                <div class="pipe-desc">AIエージェントが並列ワークツリーでコードを書く</div>
+                <div class="pipe-desc">AIエージェントがコードを書く</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
@@ -517,7 +517,7 @@
             <div class="pipe-icon pipe-ai">&#x1F50D;</div>
             <div>
                 <div class="pipe-label">検証</div>
-                <div class="pipe-desc">クロスレビュー、テスト、リント -- AIが自身の成果をチェックする</div>
+                <div class="pipe-desc">AIがレビュー、テスト、リントチェックを行う</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
@@ -533,7 +533,7 @@
             <div class="pipe-icon pipe-human">&#x1F4A1;</div>
             <div>
                 <div class="pipe-label">学習と判断</div>
-                <div class="pipe-desc">フィードバックを評価し、Intent を更新するかプロジェクトを終了する</div>
+                <div class="pipe-desc">結果をレビューし、Intentを更新するか終了する</div>
             </div>
             <span class="pipe-who who-human">Human</span>
         </div>
@@ -542,35 +542,35 @@
 
 <!-- Principles -->
 <section>
-    <h2><span class="num">05 -- </span>原則</h2>
-    <p>Intent Engineering を機能させる4つのルール。</p>
+    <h2><span class="num">05 — </span>原則</h2>
+    <p>4つのルール。破ればAIが推測を始める。</p>
 
     <div class="principles">
         <div class="principle">
-            <h3>How を書くな</h3>
-            <p>実装を指定した瞬間、それは従来のエンジニアリングになる。「Redisを使え」ではなく「外部キャッシュレイヤーは不可」と書け。パスではなく境界を制約せよ。</p>
+            <h3>Howを書かない</h3>
+            <p>Intentは制約を設定するもので、実装を指定するものではない。「Redisを使え」ではなく「外部キャッシュレイヤーは使わない」と書く。</p>
         </div>
         <div class="principle">
-            <h3>不確実性を認めよ</h3>
-            <p>不明点には (?) を付けよ。正直な「まだ分からない」は自信に満ちた推測より価値がある。Intent は想像ではなく探索を通じて明確になる。</p>
+            <h3>不確実性を認める</h3>
+            <p>不明な点は(?)でマークする。正直な不確実性は偽りの精密さに勝る。</p>
         </div>
         <div class="principle">
-            <h3>素早く終了せよ</h3>
-            <p>探索によりアイデアが無効だと判明したら、理由を記録して先に進め。よく文書化された killed の Intent は、未来の自分が同じ過ちを繰り返すことを防ぐ。</p>
+            <h3>素早く終了する</h3>
+            <p>アイデアが死んだなら、そう言って理由を記録する。killedされたIntentは将来の時間を節約する。</p>
         </div>
         <div class="principle">
-            <h3>Intent の精度 = アウトプットの品質</h3>
-            <p>「良いアプリを作れ」は Intent ではない。「新規ユーザーが30秒以内に最初の価値を体験する」が Intent である。Intent が鋭いほど、AIのパフォーマンスは向上する。</p>
+            <h3>Intentの精度 = アウトプットの品質</h3>
+            <p>「良いアプリを作れ」はノイズ。「新規ユーザーが30秒で価値に到達する」がIntentである。</p>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <div class="cta-section">
-    <h2>Intent から始めよ。</h2>
-    <p>テンプレートを手に取り、Why/What/Not を記入し、残りはAIに任せよう。</p>
+    <h2>Intentから始めよう。</h2>
+    <p>Why/What/Notを書く。残りはAIに任せる。</p>
     <div class="hero-cta">
-        <a href="guide/quickstart.html" class="btn btn-primary">クイックスタートガイド</a>
+        <a href="guide/quickstart.html" class="btn btn-primary">クイックスタート</a>
         <a href="https://github.com/roboco-io/intent-engineering" class="btn btn-ghost">GitHub</a>
     </div>
 </div>
@@ -582,7 +582,7 @@
 </div>
 
 <footer>
-    Intent Engineering by <a href="https://github.com/roboco-io">roboco-io</a> &middot; 2026 &middot; Intent を届けよ、コードではなく。
+    Intent Engineering by <a href="https://github.com/roboco-io">roboco-io</a> &middot; 2026 &middot; Intentを届けよ、コードではなく。
 </footer>
 
 </body>

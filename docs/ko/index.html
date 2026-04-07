@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intent Engineering — 의도를 전달하라, 코드가 아니라.</title>
-    <meta name="description" content="바이브 코딩 시대를 위한 실용적 패러다임. 의도를 정확하게 문서화하고, 나머지는 모두 AI에게 위임하세요.">
+    <title>의도 공학 — 코드가 아닌 의도를 전달하라.</title>
+    <meta name="description" content="바이브 코딩 시대를 위한 실용적 패러다임. 의도를 정확하게 문서화하고, 나머지는 AI에 위임하세요.">
     <style>
         :root {
             --bg: #0a0a0a;
@@ -358,67 +358,67 @@
 <body>
 
 <div class="hero">
-    <div class="hero-badge">바이브 코딩 시대를 위한 패러다임</div>
-    <h1><span>의도</span>를 전달하라,<br>코드가 아니라.</h1>
-    <p>의도를 정확하게 문서화하세요. 나머지는 모두 AI에게 위임하세요. 진정으로 중요한 엔지니어링은 무엇을 만들고, 무엇을 만들지 않을지 아는 것입니다.</p>
+    <div class="hero-badge">인간의 의도. AI의 실행.</div>
+    <h1><span>의도</span>를 전달하라,<br>코드가 아닌.</h1>
+    <p>Why, What, Not을 정의하세요. 기술 스택, 아키텍처, 일정, 구현: 나머지는 AI가 선택합니다.</p>
     <div class="hero-cta">
-        <a href="guide/quickstart.html" class="btn btn-primary">시작하기</a>
-        <a href="guide/concept.html" class="btn btn-ghost">컨셉 읽기</a>
+        <a href="guide/quickstart.html" class="btn btn-primary">빠른 시작</a>
+        <a href="guide/concept.html" class="btn btn-ghost">핵심 개념</a>
     </div>
 </div>
 
 <div class="premise">
-    <blockquote>"코드는 결코 병목이 아니었습니다. 당신은 대부분의 시간을 무엇을 만들어야 하는지 파악하는 데 쓰게 될 것입니다."</blockquote>
-    <div class="attr">— 바이브 코딩 실천가로 전향한 시니어 엔지니어</div>
+    <blockquote>"의도를 제외한 모든 것은 선택이다."</blockquote>
+    <div class="attr">Why, What, Not은 당신의 몫입니다. 나머지는 AI의 몫입니다.</div>
 </div>
 
-<!-- The Problem -->
+<!-- 문제 -->
 <section>
     <h2><span class="num">01 — </span>문제</h2>
-    <p>바이브 코딩은 코드 생성을 즉각적으로 만들었습니다. 하지만 명확한 의도 없이, AI는 47줄의 방향이 필요한 곳에 337줄의 기술 스펙을 생성합니다.</p>
+    <p>AI는 생성을 저렴하게 만들었습니다. 의도 없이 그 속도는 소음이 됩니다. 의도와 함께라면 명확함이 됩니다.</p>
     <div class="comparison">
         <div class="comp-card old">
             <h3>의도 없이</h3>
             <ul>
-                <li>AI가 기술 스택 추천을 생성함</li>
-                <li>AI가 7주짜리 일정을 작성함</li>
-                <li>AI가 유저 스토리, 용어집, 승인 문서를 만듦</li>
-                <li>8개 파일, 3,740줄, 132KB의 노이즈</li>
-                <li>여전히 무엇을 만들어야 할지 모름</li>
+                <li>AI가 요청하지 않은 기술 스택을 선택합니다</li>
+                <li>AI가 아무도 필요 없는 일정을 만들어냅니다</li>
+                <li>AI가 명세, 스토리, 프로세스를 부풀립니다</li>
+                <li>파일 8개, 3,740줄, 132KB의 소음</li>
+                <li>무엇을 만들어야 하는지 여전히 모릅니다</li>
             </ul>
         </div>
         <div class="comp-card new">
             <h3>의도와 함께</h3>
             <ul>
-                <li>Why: 이것이 왜 존재하는지에 대한 한 단락</li>
-                <li>What: 구체적인 기능, How 없이</li>
-                <li>Not: AI가 넘지 않을 명시적 경계</li>
-                <li>1개 파일, 47줄, 명확함</li>
-                <li>AI가 당신이 의도한 것을 정확히 만듦</li>
+                <li>Why: 이것이 존재해야 하는 이유</li>
+                <li>What: 참이어야 하는 것</li>
+                <li>Not: AI가 넘지 못하는 선</li>
+                <li>파일 1개, 47줄, 신호</li>
+                <li>AI가 추측 대신 실행합니다</li>
             </ul>
         </div>
     </div>
 </section>
 
-<!-- The Framework -->
+<!-- 프레임워크 -->
 <section>
     <h2><span class="num">02 — </span>프레임워크</h2>
-    <p>의도 문서는 네 개의 섹션으로 구성됩니다. 그 이상은 없습니다.</p>
+    <p>의도 문서에는 네 개의 섹션이 있습니다. 그 이상은 없습니다.</p>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-why">Why</span>
             <h3>이것은 왜 존재하는가?</h3>
         </div>
-        <p>문제, 목표, 성공의 척도. 여기가 바뀌면 피벗을 의미합니다. exploring 모드에서는 가설이고, clarified 모드에서는 확신입니다.</p>
+        <p>문제, 목표, 성공 기준을 명시합니다. 이것이 바뀌면 의도가 바뀐 것입니다.</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-what">What</span>
-            <h3>우리는 무엇을 만드는가?</h3>
+            <h3>무엇을 만드는가?</h3>
         </div>
-        <p>기능, 사용자 흐름, 엣지 케이스. 구체적이되 구현 방법에 대해서는 절대 지시하지 않습니다. 기술 스택도, 아키텍처도, 일정도 없습니다. 그것들은 AI의 몫입니다.</p>
+        <p>기능, 흐름, 엣지 케이스를 명시합니다. 구체적이되, 기술 스택, 아키텍처, 일정은 절대 지정하지 마세요.</p>
     </div>
 
     <div class="layer">
@@ -426,22 +426,22 @@
             <span class="layer-tag tag-not">Not</span>
             <h3>절대 하지 않을 것은?</h3>
         </div>
-        <p>AI가 넘어서는 안 되는 강경한 경계. 보안 제약, 범위 제한, 품질 기준, 금지된 패턴. 이것이 자율적 AI를 안전하게 만드는 가드레일입니다.</p>
+        <p>AI가 넘을 수 없는 선을 명시합니다. 범위 제한, 보안 규칙, 품질 기준, 금지 사항.</p>
     </div>
 
     <div class="layer">
         <div class="layer-header">
             <span class="layer-tag tag-learnings">Learnings</span>
-            <h3>우리는 무엇을 발견했는가?</h3>
+            <h3>무엇을 발견했는가?</h3>
         </div>
-        <p>실험, 인터뷰, 프로토타입, 그리고 그 결과에 대한 살아있는 기록. 각 항목에는 날짜, 시도한 것, 배운 것, 다음 할 일이 포함됩니다. 이것이 의도가 진화하는 방식입니다.</p>
+        <p>시도한 것, 배운 것, 바뀐 것을 기록합니다. 이것이 의도를 더 날카롭게 만드는 방법입니다.</p>
     </div>
 </section>
 
-<!-- The Lifecycle -->
+<!-- 생명주기 -->
 <section>
     <h2><span class="num">03 — </span>생명주기</h2>
-    <p>의도는 한 번 작성하고 끝나는 것이 아닙니다. 탐색과 학습을 통해 진화하거나, 증거가 말할 때 죽습니다.</p>
+    <p>의도는 고정되어 있지 않습니다. 학습을 통해 날카로워지거나 증거에 의해 사라집니다.</p>
 
     <div class="lifecycle">
         <div class="lc-node lc-seed">seed</div>
@@ -454,7 +454,7 @@
     </div>
     <div class="lifecycle" style="margin-top:-20px;">
         <div class="lc-node lc-killed">killed</div>
-        <span style="color:var(--text-muted);font-size:13px;padding-left:12px;">&larr; 어떤 상태에서든 여기에 도달할 수 있습니다. 그것도 좋은 결과입니다.</span>
+        <span style="color:var(--text-muted);font-size:13px;padding-left:12px;">&larr; 어떤 상태에서든 여기서 끝날 수 있습니다. 좋은 일입니다.</span>
     </div>
 
     <div class="codeblock">
@@ -483,25 +483,25 @@
     </div>
 </section>
 
-<!-- The Pipeline -->
+<!-- 파이프라인 -->
 <section>
     <h2><span class="num">04 — </span>파이프라인</h2>
-    <p>사람은 맨 위와 맨 아래만 담당합니다. 그 사이의 모든 것은 AI가 합니다.</p>
+    <p>인간은 의도를 정의하고 결과를 판단합니다. 나머지는 AI가 합니다.</p>
 
     <div class="pipeline">
         <div class="pipe-step">
             <div class="pipe-icon pipe-human">&#x270D;</div>
             <div>
                 <div class="pipe-label">의도 작성</div>
-                <div class="pipe-desc">템플릿을 사용하여 Why / What / Not 작성</div>
+                <div class="pipe-desc">Why / What / Not 작성</div>
             </div>
-            <span class="pipe-who who-human">사람</span>
+            <span class="pipe-who who-human">인간</span>
         </div>
         <div class="pipe-step">
             <div class="pipe-icon pipe-ai">&#x2699;</div>
             <div>
-                <div class="pipe-label">스펙 생성</div>
-                <div class="pipe-desc">AI가 의도 문서에서 태스크 목록을 도출</div>
+                <div class="pipe-label">명세 생성</div>
+                <div class="pipe-desc">AI가 의도를 작업으로 변환</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
@@ -509,7 +509,7 @@
             <div class="pipe-icon pipe-ai">&#x1F4BB;</div>
             <div>
                 <div class="pipe-label">구현</div>
-                <div class="pipe-desc">AI 에이전트가 병렬 워크트리에서 코드 작성</div>
+                <div class="pipe-desc">AI 에이전트가 코드 작성</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
@@ -517,7 +517,7 @@
             <div class="pipe-icon pipe-ai">&#x1F50D;</div>
             <div>
                 <div class="pipe-label">검증</div>
-                <div class="pipe-desc">교차 리뷰, 테스트, 린트 — AI가 자체 작업을 확인</div>
+                <div class="pipe-desc">AI가 리뷰, 테스트, 린트 검사</div>
             </div>
             <span class="pipe-who who-ai">AI</span>
         </div>
@@ -532,45 +532,45 @@
         <div class="pipe-step">
             <div class="pipe-icon pipe-human">&#x1F4A1;</div>
             <div>
-                <div class="pipe-label">학습 &amp; 결정</div>
-                <div class="pipe-desc">피드백 평가, 의도 업데이트 또는 프로젝트 종료</div>
+                <div class="pipe-label">학습 &amp; 판단</div>
+                <div class="pipe-desc">결과를 검토합니다. 의도를 갱신하거나 폐기합니다</div>
             </div>
-            <span class="pipe-who who-human">사람</span>
+            <span class="pipe-who who-human">인간</span>
         </div>
     </div>
 </section>
 
-<!-- Principles -->
+<!-- 원칙 -->
 <section>
     <h2><span class="num">05 — </span>원칙</h2>
-    <p>Intent Engineering을 작동하게 만드는 네 가지 규칙.</p>
+    <p>네 가지 규칙. 어기면 AI가 추측을 시작합니다.</p>
 
     <div class="principles">
         <div class="principle">
-            <h3>절대 How를 쓰지 마라</h3>
-            <p>구현을 지정하는 순간, 당신은 전통적인 엔지니어링을 하는 것입니다. "Redis를 사용하라" 대신 "외부 캐시 레이어 없음"이라고 쓰세요. 경로가 아닌 경계를 제한하세요.</p>
+            <h3>How를 쓰지 마라</h3>
+            <p>의도는 제약을 설정하지, 구현을 지정하지 않습니다. "외부 캐시 레이어 금지"라고 쓰세요. "Redis를 사용하라"가 아니라.</p>
         </div>
         <div class="principle">
             <h3>불확실성을 인정하라</h3>
-            <p>모르는 것에는 (?)를 표시하세요. 솔직한 "아직 모르겠다"가 자신 있는 추측보다 가치가 있습니다. 의도는 상상이 아닌 탐색을 통해 명확해집니다.</p>
+            <p>(?)로 불확실한 부분을 표시하세요. 솔직한 불확실성이 가짜 정밀도보다 낫습니다.</p>
         </div>
         <div class="principle">
-            <h3>빠르게 죽여라</h3>
-            <p>탐색 결과 아이디어가 죽은 것으로 판명되면, 이유를 기록하고 넘어가세요. 잘 문서화된 killed 의도는 미래의 당신이 같은 실수를 반복하는 것을 막아줍니다.</p>
+            <h3>빠르게 폐기하라</h3>
+            <p>아이디어가 죽었다면 선언하고 이유를 기록하세요. 폐기된 의도는 미래의 시간을 절약합니다.</p>
         </div>
         <div class="principle">
-            <h3>의도의 정밀도 = 결과물의 품질</h3>
-            <p>"좋은 앱을 만들어라"는 의도가 아닙니다. "신규 사용자가 30초 안에 첫 번째 가치를 경험한다"가 의도입니다. 의도가 날카로울수록 AI의 성능이 좋아집니다.</p>
+            <h3>의도의 정밀도 = 산출물의 품질</h3>
+            <p>"좋은 앱을 만들어줘"는 소음입니다. "신규 사용자가 30초 안에 가치에 도달"이 의도입니다.</p>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <div class="cta-section">
-    <h2>의도로 시작하세요.</h2>
-    <p>템플릿을 받고, Why/What/Not을 작성하고, 나머지는 AI에게 맡기세요.</p>
+    <h2>의도에서 시작하세요.</h2>
+    <p>Why/What/Not을 작성하세요. 나머지는 AI에게 맡기세요.</p>
     <div class="hero-cta">
-        <a href="guide/quickstart.html" class="btn btn-primary">빠른 시작 가이드</a>
+        <a href="guide/quickstart.html" class="btn btn-primary">빠른 시작</a>
         <a href="https://github.com/roboco-io/intent-engineering" class="btn btn-ghost">GitHub</a>
     </div>
 </div>
@@ -582,7 +582,7 @@
 </div>
 
 <footer>
-    Intent Engineering by <a href="https://github.com/roboco-io">roboco-io</a> &middot; 2026 &middot; 의도를 전달하라, 코드가 아니라.
+    의도 공학 by <a href="https://github.com/roboco-io">roboco-io</a> &middot; 2026 &middot; 코드가 아닌 의도를 전달하라.
 </footer>
 
 </body>

@@ -91,85 +91,85 @@
 
 <div class="content">
     <h1>The Concept</h1>
-    <p class="subtitle">Why Intent Engineering exists, how it relates to what came before, and what it changes about the way we build software.</p>
+    <p class="subtitle">Why Intent Engineering exists, what it rejects, and what changes when intent becomes the scarce resource.</p>
 
     <h2>The bottleneck has moved</h2>
 
-    <p>For fifty years, software engineering optimized for a single constraint: <strong>code is expensive to write</strong>. We invented design patterns, code review, CI/CD, microservices, agile — all to manage the cost and risk of humans writing code.</p>
+    <p>Software engineering spent decades optimizing for one constraint: <strong>human-written code was expensive</strong>. Patterns, code review, CI/CD, microservices, agile: all management systems for scarce code.</p>
 
-    <p>Vibe coding dissolved that constraint overnight. AI agents can now generate, review, test, and deploy code faster than any human team. The staff SWE who ships 10,000 commits in six months is no longer science fiction — it's Tuesday.</p>
+    <p>That constraint collapsed. AI agents can now generate, review, test, and deploy code at machine speed.</p>
 
-    <p>But a new bottleneck emerged: <strong>intent</strong>. When code is free, the scarce resource is knowing what to build, why to build it, and what not to build. Without clear intent, AI produces mountains of technically correct but strategically useless output.</p>
+    <p>The new bottleneck is <strong>intent</strong>. When code is cheap, the scarce resource is deciding what to build, why it matters, and what must stay out. Without that, AI produces polished waste.</p>
 
     <div class="callout">
-        <p>Intent Engineering is a paradigm that accepts this shift. It puts all human effort into precisely documenting intent, and delegates everything downstream — spec generation, implementation, verification, deployment — to AI.</p>
+        <p>Intent Engineering accepts the shift: everything other than intent is choice. Stack, architecture, timeline. The human job is Why, What, Not, and Learnings. AI handles the rest.</p>
     </div>
 
     <h2>What Intent Engineering is not</h2>
 
-    <p>It is <strong>not prompt engineering</strong>. Prompt engineering optimizes how you talk to AI in a single session. Intent Engineering defines a persistent, evolving document that shapes all sessions.</p>
+    <p>It is <strong>not prompt engineering</strong>: prompt engineering tunes one conversation, while Intent Engineering defines the persistent document every conversation inherits.</p>
 
-    <p>It is <strong>not a design doc</strong>. Design docs prescribe how to build something: architecture, tech stack, timelines, milestones. Intent Documents explicitly exclude How. Implementation decisions are AI's domain.</p>
+    <p>It is <strong>not a design doc</strong>: design docs prescribe How, while Intent Documents refuse to, because stack, architecture, and timelines are implementation choices.</p>
 
-    <p>It is <strong>not a PRD</strong>. Product requirement documents are comprehensive and static. Intent Documents are minimal and alive. They evolve through exploration, and they can be killed.</p>
+    <p>It is <strong>not a PRD</strong>: PRDs try to be comprehensive and static, while Intent Documents stay minimal, evolve through exploration, and can be killed.</p>
 
-    <p>It is <strong>not a framework or tool</strong>. It's a markdown file and a discipline. You can adopt it today in any project with zero dependencies.</p>
+    <p>It is <strong>not a framework or tool</strong>: it is a markdown file and a discipline.</p>
 
     <h2>The three layers</h2>
 
-    <p>An Intent Document has exactly three content layers. Anything beyond these is noise that confuses AI and wastes human attention.</p>
+    <p>An Intent Document has exactly three layers because humans only own three things here: Why, What, and Not. Everything else is implementation choice.</p>
 
     <h3>Why — the reason this exists</h3>
 
-    <p>The problem being solved, the goal if successful, and how to measure success. In exploration phase, the Why is a hypothesis — a bet that might be wrong. In clarified phase, the Why is conviction backed by evidence. If the Why changes fundamentally, that's a pivot, and it should be rare and deliberate.</p>
+    <p>Why is the claim about value: whose pain matters, what outcome counts as success, and what evidence would change your mind. In seed and exploring, it is a wager; in clarified, it is a commitment.</p>
 
     <h3>What — the thing being built</h3>
 
-    <p>Features, user flows, and edge cases. Written concretely enough that AI can derive tasks from it, but never prescriptive about implementation. "Users can export reports as PDF" is good. "Use puppeteer to generate PDFs via headless Chrome" is How, and it doesn't belong here.</p>
+    <p>What is the surface area of the promise: features, user flows, and edge cases. It must be concrete enough for AI to derive work from, but silent on How; "users can export reports as PDF" belongs here, "use puppeteer" does not.</p>
 
     <h3>Not — the boundaries that must not be crossed</h3>
 
-    <p>This is the most underrated layer. Security constraints, scope limits, quality bars, forbidden patterns. Without Not, AI will make reasonable-looking decisions that violate your unstated assumptions. "Never store production keys locally." "No any types." "Mobile is out of scope." These lines save you from AI's optimistic helpfulness.</p>
+    <p>Not is where seriousness shows: security constraints, scope limits, quality bars, forbidden patterns. Without Not, AI will optimize against assumptions you never wrote down.</p>
 
     <h2>Learnings — the evolution engine</h2>
 
-    <p>People rarely know what they want at the start. An idea begins as a seed — vague, uncertain, full of assumptions. The path to clarity runs through <strong>exploration</strong>: building prototypes, interviewing users, studying competitors, failing fast.</p>
+    <p>Clarity usually comes late. An idea starts as seed: vague, fragile, and wrong in interesting ways. The way forward is <strong>exploration</strong>.</p>
 
-    <p>Learnings is a timestamped log of these explorations and their outcomes. Each entry records what was tried, what was discovered, and what changed as a result. This serves two purposes:</p>
+    <p>Learnings is the timestamped record of what you tried, what reality said, and what changed.</p>
 
-    <p><strong>For the human:</strong> it creates an audit trail of decisions. When you look back at why the project pivoted, the answer is in the Learnings, not in someone's memory.</p>
+    <p><strong>For humans:</strong> it kills revisionist history. When the project pivots, the reason is in Learnings, not in memory.</p>
 
-    <p><strong>For the AI:</strong> it provides context that no amount of code can. An AI reading the Learnings section understands not just what the project is, but how it got there and what was already tried.</p>
+    <p><strong>For AI:</strong> it carries context code never will. The agent sees not just the current shape, but the path that produced it.</p>
 
     <h2>The lifecycle</h2>
 
-    <p>Intent is not static. It moves through four states:</p>
+    <p>Intent moves through four states:</p>
 
     <table>
         <tr><th>State</th><th>Description</th><th>What to do</th></tr>
         <tr>
             <td class="highlight">seed</td>
-            <td>Just an idea. Why is a guess, What/Not are empty or vague.</td>
-            <td>Write a hypothesis. Start your first experiment.</td>
+            <td>Idea only. Why is a guess; What and Not are empty or vague.</td>
+            <td>Write the hypothesis. Run the first test.</td>
         </tr>
         <tr>
             <td class="highlight">exploring</td>
-            <td>Actively testing the hypothesis through prototypes, research, interviews.</td>
-            <td>Run experiments. Record learnings. Update Why/What/Not as you go.</td>
+            <td>Hypothesis under pressure through prototypes, research, and interviews.</td>
+            <td>Run experiments. Record Learnings. Rewrite Why/What/Not as needed.</td>
         </tr>
         <tr>
             <td class="highlight">clarified</td>
-            <td>All three layers filled with conviction. No uncertainty markers.</td>
-            <td>Hand off to AI. Build it.</td>
+            <td>Why, What, and Not are explicit. Uncertainty markers are gone.</td>
+            <td>Hand off to AI. Let it build.</td>
         </tr>
         <tr>
             <td class="highlight">killed</td>
-            <td>Evidence shows this isn't worth building, or an existing solution covers it.</td>
-            <td>Record why. Move on. This is a good outcome.</td>
+            <td>Evidence says do not build, or an existing solution already wins.</td>
+            <td>Record why. Stop. This is a good outcome.</td>
         </tr>
     </table>
 
-    <p>The most important transition is <strong>any state → killed</strong>. Knowing when to stop is harder than knowing when to start. A well-documented kill saves months of wasted effort and prevents the same dead-end from being explored again.</p>
+    <p>The hardest transition is <strong>any state → killed</strong>. Starting projects is cheap; stopping bad ones is judgment.</p>
 
     <h2>Relationship to existing concepts</h2>
 
@@ -178,28 +178,28 @@
         <tr>
             <td class="highlight">Context Engineering</td>
             <td>Per-task, ephemeral</td>
-            <td>The Intent Document becomes the top-level context that frames all tasks.</td>
+            <td>The Intent Document is the persistent context above all tasks.</td>
         </tr>
         <tr>
             <td class="highlight">Harness Engineering</td>
             <td>Tool and environment setup</td>
-            <td>The Not layer is the source of truth for harness rules (CLAUDE.md, linters, CI checks).</td>
+            <td>The Not layer should compile into harness rules: CLAUDE.md, linters, CI.</td>
         </tr>
         <tr>
             <td class="highlight">Spec-driven Development</td>
             <td>Feature specification</td>
-            <td>Specs are auto-derived from the What layer. Humans stop writing them.</td>
+            <td>Specs are derived from What. Humans stop hand-authoring them.</td>
         </tr>
         <tr>
             <td class="highlight">Vibe Coding</td>
             <td>Code generation</td>
-            <td>Vibe coding is maximally effective when intent is clear. Intent Engineering provides that clarity.</td>
+            <td>Vibe coding gets leverage only when intent is sharp.</td>
         </tr>
     </table>
 
     <h2>The automation pipeline</h2>
 
-    <p>When Intent Engineering is fully operational, humans touch only two points in the pipeline: the very top (writing intent) and the very bottom (evaluating outcomes and updating intent).</p>
+    <p>In a mature pipeline, humans touch two points: intent at the top, judgment at the bottom.</p>
 
     <pre><code>  [Intent Document]     ← Human writes and maintains
          ↓
@@ -215,23 +215,23 @@
          ↓
   [Learn & Decide]      ← Human evaluates, updates intent or kills</code></pre>
 
-    <p>Everything between intent and feedback is automatable today. Context engineering, harness engineering, spec writing — all of it can be derived from a well-written Intent Document. The human's irreducible job is deciding <strong>what matters</strong> and <strong>what we learned</strong>.</p>
+    <p>Everything between intent and feedback is automatable now. Tech stack, architecture, task breakdown, verification flow, deployment cadence: choices. The irreducible human job is Why, What, Not, and Learnings.</p>
 
     <h2>Why it works</h2>
 
-    <p><strong>Constraints breed creativity.</strong> By limiting the document to Why/What/Not, you force yourself to think about what actually matters. Every other format — PRDs, design docs, project plans — lets you hide behind detail. Intent Engineering leaves you nowhere to hide.</p>
+    <p><strong>Constraints breed clarity.</strong> Why/What/Not removes the places people hide: roadmap theater, architecture cosplay, false precision. If you cannot state intent cleanly, you are not ready to build.</p>
 
-    <p><strong>AI is better at How than you are.</strong> AI has read every architecture pattern, every framework doc, every Stack Overflow answer. Telling it how to implement something limits it to your knowledge. Telling it what to achieve unlocks its full capability.</p>
+    <p><strong>AI is better at How than you are.</strong> It has broader implementation recall than any individual engineer. Over-specifying How caps the solution at your local maximum.</p>
 
-    <p><strong>Killing is productive.</strong> Most engineering cultures treat abandoned projects as failures. Intent Engineering treats a documented kill as a learning asset. The Learnings section of a killed project might be more valuable than the code of a shipped one.</p>
+    <p><strong>Killing is productive.</strong> A documented kill is not waste; it is paid-down uncertainty. The Learnings from a dead project often outlast the code from a shipped one.</p>
 
-    <p><strong>Intent precision scales.</strong> One clear sentence in the Why section — "new users experience first value in 30 seconds" — propagates through every AI-generated task, every code review, every test. Vague intent produces vague code. Sharp intent produces sharp systems.</p>
+    <p><strong>Intent precision scales.</strong> One sharp sentence in Why propagates through task generation, review, tests, and deployment. Vague intent multiplies ambiguity; sharp intent multiplies coherence.</p>
 
     <h2>Getting started</h2>
 
-    <p>Create a file called <code>INTENT.md</code> at the root of your project. Fill in Why. Be honest about What and Not — leave unknowns marked with <code>(?)</code>. Start exploring. Record what you learn. Update or kill when evidence demands it.</p>
+    <p>Create <code>INTENT.md</code> at the project root and write only Why, What, Not, and Learnings. Mark uncertainty with <code>(?)</code> until evidence removes it.</p>
 
-    <p>That's Intent Engineering. No framework to install. No tools to configure. Just a discipline of knowing what you want and writing it down.</p>
+    <p>The mechanics are in the Quick Start Guide; the discipline is refusing to smuggle How into the document.</p>
 
     <p><a href="quickstart.html">→ Quick Start Guide</a></p>
 </div>

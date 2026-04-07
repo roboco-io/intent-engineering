@@ -91,147 +91,147 @@
 
 <div class="content">
     <h1>核心概念</h1>
-    <p class="subtitle">Intent Engineering 为何存在、它与前人的关系，以及它如何改变我们构建软件的方式。</p>
+    <p class="subtitle">Intent Engineering 为何存在、它拒绝什么、以及当意图成为稀缺资源时会发生什么变化。</p>
 
     <h2>瓶颈已经转移</h2>
 
-    <p>五十年来，软件工程围绕一个单一约束进行优化：<strong>编写代码成本高昂</strong>。我们发明了设计模式、代码审查、CI/CD、微服务、敏捷 -- 所有这些都是为了管理人类编写代码的成本和风险。</p>
+    <p>软件工程花了数十年来优化一个约束：<strong>人工编写代码是昂贵的</strong>。设计模式、代码审查、CI/CD、微服务、敏捷：所有这些都是管理稀缺代码的系统。</p>
 
-    <p>氛围编程一夜之间消解了这个约束。AI 代理现在可以比任何人类团队更快地生成、审查、测试和部署代码。一位资深软件工程师六个月内提交 10,000 次 commit 不再是科幻 -- 这就是日常。</p>
+    <p>这个约束已经瓦解。AI 代理现在可以以机器速度生成、审查、测试和部署代码。</p>
 
-    <p>但一个新瓶颈出现了：<strong>意图</strong>。当代码免费时，稀缺资源是知道该构建什么、为什么构建以及不该构建什么。没有清晰的意图，AI 会产出大量技术上正确但战略上无用的输出。</p>
+    <p>新的瓶颈是<strong>意图</strong>。当代码变得廉价时，稀缺资源变成了决定构建什么、为什么重要、以及什么必须排除在外。没有这些，AI 只会生产精致的废品。</p>
 
     <div class="callout">
-        <p>Intent Engineering 是一种接受这一转变的范式。它将所有人类精力投入到精确记录意图上，并将下游的一切 -- 规格生成、实现、验证、部署 -- 委托给 AI。</p>
+        <p>Intent Engineering 接受了这一转变：除了意图之外的一切都是选择。技术栈、架构、时间线。人类的工作是 Why、What、Not 和 Learnings。AI 处理其余的一切。</p>
     </div>
 
     <h2>Intent Engineering 不是什么</h2>
 
-    <p>它<strong>不是提示工程</strong>。提示工程优化的是你在单次会话中如何与 AI 对话。Intent Engineering 定义的是一份持久的、不断演进的文档，它塑造所有会话。</p>
+    <p>它<strong>不是提示工程</strong>：提示工程调优单次对话，而 Intent Engineering 定义的是每次对话都继承的持久文档。</p>
 
-    <p>它<strong>不是设计文档</strong>。设计文档规定如何构建：架构、技术栈、时间表、里程碑。Intent 文档明确排除"如何实现"。实现决策是 AI 的领域。</p>
+    <p>它<strong>不是设计文档</strong>：设计文档规定 How，而 Intent 文档拒绝这样做，因为技术栈、架构和时间线都是实现选择。</p>
 
-    <p>它<strong>不是 PRD</strong>。产品需求文档是全面且静态的。Intent 文档是精简且鲜活的。它们通过探索而演进，也可以被终止。</p>
+    <p>它<strong>不是 PRD</strong>：PRD 试图做到全面且静态，而 Intent 文档保持精简、通过探索演进，并且可以被终止。</p>
 
-    <p>它<strong>不是框架或工具</strong>。它是一个 markdown 文件和一种纪律。你今天就可以在任何项目中零依赖地采用它。</p>
+    <p>它<strong>不是框架或工具</strong>：它是一个 markdown 文件和一种纪律。</p>
 
     <h2>三个层次</h2>
 
-    <p>一份 Intent 文档恰好有三个内容层次。超出这些的都是噪音，会混淆 AI 并浪费人类的注意力。</p>
+    <p>Intent 文档恰好有三个层次，因为人类在这里只拥有三样东西：Why、What 和 Not。其余一切都是实现选择。</p>
 
-    <h3>Why -- 存在的理由</h3>
+    <h3>Why — 存在的理由</h3>
 
-    <p>要解决的问题、成功后的目标、以及如何衡量成功。在探索阶段，Why 是一个假设 -- 一个可能是错的赌注。在 clarified 阶段，Why 是有证据支撑的坚定信念。如果 Why 发生根本性改变，那就是一次战略转向，这应该是罕见且深思熟虑的。</p>
+    <p>Why 是关于价值的声明：谁的痛点重要、什么结果算成功、以及什么证据会改变你的想法。在 seed 和 exploring 阶段，它是一个赌注；在 clarified 阶段，它是一个承诺。</p>
 
-    <h3>What -- 正在构建的东西</h3>
+    <h3>What — 正在构建的东西</h3>
 
-    <p>功能、用户流程和边界情况。写得足够具体以便 AI 能从中推导任务，但绝不规定实现方式。"用户可以将报告导出为 PDF"是好的。"使用 puppeteer 通过 headless Chrome 生成 PDF"是"如何实现"，不属于这里。</p>
+    <p>What 是承诺的覆盖面：功能、用户流程和边界情况。它必须足够具体，让 AI 能从中派生工作，但对 How 保持沉默；"用户可以将报告导出为 PDF"属于这里，"使用 puppeteer"则不属于。</p>
 
-    <h3>Not -- 绝不能逾越的边界</h3>
+    <h3>Not — 不可逾越的边界</h3>
 
-    <p>这是最被低估的层次。安全约束、范围限制、质量标准、禁止的模式。没有 Not，AI 会做出看似合理但违反你未声明假设的决定。"绝不在本地存储生产环境密钥。""不允许 any 类型。""移动端不在范围内。"这些界限让你免受 AI 乐观式帮助的伤害。</p>
+    <p>Not 是严肃性的体现：安全约束、范围限制、质量标准、禁止的模式。没有 Not，AI 会根据你从未写下的假设来优化。</p>
 
-    <h2>Learnings -- 演进引擎</h2>
+    <h2>Learnings — 演进引擎</h2>
 
-    <p>人们很少在一开始就知道自己想要什么。一个想法始于 seed -- 模糊、不确定、充满假设。通往清晰的道路要经过<strong>探索</strong>：构建原型、访谈用户、研究竞品、快速失败。</p>
+    <p>清晰通常来得很晚。一个想法起初是 seed：模糊的、脆弱的，并且以有趣的方式是错误的。前进的方式是<strong>探索</strong>。</p>
 
-    <p>Learnings 是这些探索及其结果的时间戳日志。每条记录记载了尝试了什么、发现了什么、以及因此做出了什么改变。这有两个作用：</p>
+    <p>Learnings 是带时间戳的记录，记载你尝试了什么、现实说了什么、以及什么发生了变化。</p>
 
-    <p><strong>对人类而言：</strong>它创建了一条决策审计轨迹。当你回顾项目为何转向时，答案在 Learnings 中，而不在某个人的记忆里。</p>
+    <p><strong>对于人类：</strong>它杜绝了事后修改历史。当项目发生转向时，原因在 Learnings 中，而不是在记忆里。</p>
 
-    <p><strong>对 AI 而言：</strong>它提供了再多代码也无法替代的上下文。一个阅读 Learnings 部分的 AI 不仅理解项目是什么，还理解它是如何走到这里的，以及哪些已经尝试过了。</p>
+    <p><strong>对于 AI：</strong>它承载着代码永远无法承载的上下文。代理看到的不仅是当前的形态，还有产生它的路径。</p>
 
     <h2>生命周期</h2>
 
-    <p>Intent 不是静态的。它经历四个状态：</p>
+    <p>Intent 经历四个状态：</p>
 
     <table>
-        <tr><th>状态</th><th>描述</th><th>该怎么做</th></tr>
+        <tr><th>状态</th><th>描述</th><th>该做什么</th></tr>
         <tr>
             <td class="highlight">seed</td>
-            <td>只是一个想法。Why 是猜测，What/Not 为空或模糊。</td>
-            <td>写一个假设。开始你的第一个实验。</td>
+            <td>仅有想法。Why 是猜测；What 和 Not 为空或模糊。</td>
+            <td>写下假设。运行第一个测试。</td>
         </tr>
         <tr>
             <td class="highlight">exploring</td>
-            <td>通过原型、研究、访谈积极验证假设。</td>
-            <td>进行实验。记录学习成果。随时更新 Why/What/Not。</td>
+            <td>假设正在通过原型、研究和访谈接受压力测试。</td>
+            <td>运行实验。记录 Learnings。根据需要重写 Why/What/Not。</td>
         </tr>
         <tr>
             <td class="highlight">clarified</td>
-            <td>三个层次都已确信填写完毕。没有不确定标记。</td>
-            <td>交给 AI。开始构建。</td>
+            <td>Why、What 和 Not 都已明确。不确定性标记已消除。</td>
+            <td>交给 AI。让它去构建。</td>
         </tr>
         <tr>
             <td class="highlight">killed</td>
-            <td>证据表明这不值得构建，或已有现成的解决方案。</td>
-            <td>记录原因。继续前进。这是一个好结果。</td>
+            <td>证据表明不应构建，或现有方案已经胜出。</td>
+            <td>记录原因。停止。这是一个好的结果。</td>
         </tr>
     </table>
 
-    <p>最重要的转换是<strong>任何状态 → killed</strong>。知道何时停止比知道何时开始更难。一次记录完善的终止可以节省数月的浪费，并防止同一死胡同被再次探索。</p>
+    <p>最困难的转换是<strong>任何状态 → killed</strong>。启动项目很廉价；终止糟糕的项目才是判断力。</p>
 
     <h2>与现有概念的关系</h2>
 
     <table>
         <tr><th>概念</th><th>范围</th><th>与 Intent Engineering 的关系</th></tr>
         <tr>
-            <td class="highlight">上下文工程</td>
-            <td>按任务，短暂的</td>
-            <td>Intent 文档成为构建所有任务框架的顶层上下文。</td>
+            <td class="highlight">Context Engineering</td>
+            <td>单任务、临时性</td>
+            <td>Intent 文档是所有任务之上的持久上下文。</td>
         </tr>
         <tr>
-            <td class="highlight">约束工程</td>
+            <td class="highlight">Harness Engineering</td>
             <td>工具和环境配置</td>
-            <td>Not 层是约束规则（CLAUDE.md、代码检查器、CI 检查）的真实来源。</td>
+            <td>Not 层应编译为工具规则：CLAUDE.md、linter、CI。</td>
         </tr>
         <tr>
-            <td class="highlight">规格驱动开发</td>
-            <td>功能规格</td>
-            <td>规格从 What 层自动推导。人类不再编写它们。</td>
+            <td class="highlight">Spec-driven Development</td>
+            <td>功能规格说明</td>
+            <td>规格说明从 What 派生。人类不再手动编写它们。</td>
         </tr>
         <tr>
-            <td class="highlight">氛围编程</td>
+            <td class="highlight">Vibe Coding</td>
             <td>代码生成</td>
-            <td>当意图清晰时，氛围编程效果最佳。Intent Engineering 提供这种清晰度。</td>
+            <td>只有当意图足够锐利时，Vibe Coding 才能发挥杠杆作用。</td>
         </tr>
     </table>
 
     <h2>自动化流水线</h2>
 
-    <p>当 Intent Engineering 全面运作时，人类只接触流水线中的两个点：最顶端（编写意图）和最底端（评估结果并更新意图）。</p>
+    <p>在成熟的流水线中，人类只触及两个节点：顶部的意图和底部的判断。</p>
 
-    <pre><code>  [Intent 文档]          ← 人类编写和维护
+    <pre><code>  [Intent Document]     ← Human writes and maintains
          ↓
-  [规格生成]              ← AI 从 Why/What/Not 推导任务列表
+  [Spec Generation]     ← AI derives task list from Why/What/Not
          ↓
-  [实现]                  ← AI 代理并行编写代码
+  [Implementation]      ← AI agents write code in parallel
          ↓
-  [验证]                  ← AI 交叉审查、测试、代码检查
+  [Verification]        ← AI cross-reviews, tests, lints
          ↓
-  [部署]                  ← CI/CD 自动化发布
+  [Deployment]          ← CI/CD automates release
          ↓
-  [反馈]                  ← 用户数据回流
+  [Feedback]            ← User data flows back
          ↓
-  [学习与决策]            ← 人类评估，更新意图或终止</code></pre>
+  [Learn & Decide]      ← Human evaluates, updates intent or kills</code></pre>
 
-    <p>从意图到反馈之间的一切在今天都是可自动化的。上下文工程、约束工程、规格编写 -- 所有这些都可以从一份写得好的 Intent 文档中推导出来。人类不可替代的工作是决定<strong>什么重要</strong>以及<strong>我们学到了什么</strong>。</p>
+    <p>从意图到反馈之间的一切现在都可以自动化。技术栈、架构、任务分解、验证流程、部署节奏：都是选择。不可替代的人类工作是 Why、What、Not 和 Learnings。</p>
 
     <h2>为什么有效</h2>
 
-    <p><strong>约束激发创造力。</strong> 通过将文档限制在 Why/What/Not，你迫使自己思考什么才真正重要。其他所有格式 -- PRD、设计文档、项目计划 -- 都允许你藏在细节之后。Intent Engineering 让你无处可藏。</p>
+    <p><strong>约束催生清晰。</strong>Why/What/Not 消除了人们隐藏的地方：路线图戏剧、架构表演、虚假的精确。如果你无法清晰地表述意图，你就没有准备好去构建。</p>
 
-    <p><strong>AI 比你更擅长"如何实现"。</strong> AI 已经阅读了每一种架构模式、每一份框架文档、每一个 Stack Overflow 答案。告诉它如何实现会将其限制在你的知识范围内。告诉它要实现什么则能释放其全部能力。</p>
+    <p><strong>AI 比你更擅长 How。</strong>它拥有比任何个人工程师更广泛的实现记忆。过度指定 How 会将解决方案限制在你的局部最优。</p>
 
-    <p><strong>终止也是生产力。</strong> 大多数工程文化将放弃的项目视为失败。Intent Engineering 将一次记录完善的终止视为学习资产。一个被终止项目的 Learnings 部分可能比一个已上线项目的代码更有价值。</p>
+    <p><strong>终止也是生产力。</strong>一个有文档记录的终止不是浪费；它是偿还的不确定性。一个死掉项目的 Learnings 往往比一个已发布项目的代码存活得更久。</p>
 
-    <p><strong>意图的精度可以扩展。</strong> Why 部分中一句清晰的话 -- "新用户在 30 秒内体验到首次价值" -- 会传播到每一个 AI 生成的任务、每一次代码审查、每一个测试中。模糊的意图产生模糊的代码。精准的意图产生精准的系统。</p>
+    <p><strong>Intent 精度可扩展。</strong>Why 中一句精准的话会传播到任务生成、审查、测试和部署。模糊的意图放大歧义；锐利的意图放大一致性。</p>
 
     <h2>开始使用</h2>
 
-    <p>在项目根目录创建一个名为 <code>INTENT.md</code> 的文件。填写 Why。对 What 和 Not 保持诚实 -- 将未知项标记为 <code>(?)</code>。开始探索。记录你学到的东西。当证据要求时更新或终止。</p>
+    <p>在项目根目录创建 <code>INTENT.md</code>，只写 Why、What、Not 和 Learnings。用 <code>(?)</code> 标记不确定的地方，直到证据消除它。</p>
 
-    <p>这就是 Intent Engineering。没有要安装的框架。没有要配置的工具。只是一种知道自己想要什么并把它写下来的纪律。</p>
+    <p>具体操作在快速开始指南中；纪律在于拒绝将 How 偷渡进文档。</p>
 
     <p><a href="quickstart.html">→ 快速开始指南</a></p>
 </div>
