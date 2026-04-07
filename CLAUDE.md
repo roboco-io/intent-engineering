@@ -10,7 +10,7 @@ Intent Engineering — a static site introducing the "Ship intent, not code." pa
 
 - **Pure HTML/CSS static site** — no build tools, no JS frameworks (intentional design decision aligned with the paradigm's philosophy)
 - **GitHub Pages** — served from `docs/` on main branch
-- Deploy URL: `https://roboco-io.github.io/intent-engineering/`
+- Deploy URL: `https://intent.roboco.io/`
 - **No build step** — edit HTML files directly, `open docs/index.html` to preview
 
 ## Key Files

@@ -54,13 +54,13 @@ seed → exploring → clarified → build
 4. Explore, learn, update. Or kill when evidence says so.
 5. Once clarified, hand off to AI.
 
-Full guide: [intentengineering.dev](https://roboco-io.github.io/intent-engineering/) (or see `docs/`)
+Full guide: [intent.roboco.io](https://intent.roboco.io/) (or see `docs/`)
 
 ## Links
 
-- [Landing Page](https://roboco-io.github.io/intent-engineering/)
-- [Quick Start Guide](https://roboco-io.github.io/intent-engineering/guide/quickstart.html)
-- [Full Concept](https://roboco-io.github.io/intent-engineering/guide/concept.html)
+- [Landing Page](https://intent.roboco.io/)
+- [Quick Start Guide](https://intent.roboco.io/guide/quickstart.html)
+- [Full Concept](https://intent.roboco.io/guide/concept.html)
 
 ## License
 
