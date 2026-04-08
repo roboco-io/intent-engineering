@@ -217,6 +217,20 @@
 
     <p>Everything between intent and feedback is automatable now. Tech stack, architecture, task breakdown, verification flow, deployment cadence: choices. The irreducible human job is Why, What, Not, and Learnings.</p>
 
+    <h2>The .gitignore thought experiment</h2>
+
+    <p>Ask repeatedly: <strong>what is NOT in .gitignore?</strong> — what survives in the repo that cannot be regenerated?</p>
+
+    <p>Code is output, like <code>node_modules</code> — AI can regenerate it. Tests are derivable from What. Config and infra are choices AI can make. Docs are derivable from intent. Strip away everything regenerable and one file remains: <code>INTENT.md</code>.</p>
+
+    <p>This is not a metaphor. It is the logical endpoint: the only artifact that requires human insight is the intent itself. Everything else is abstraction waiting to happen.</p>
+
+    <h2>Intent is convergence, not declaration</h2>
+
+    <p>Good intent is not written once. It is converged on through <strong>hypothesis → build → validate</strong> loops. The Learnings section is the engine of that convergence — it turns failed experiments into assets so the same dead ends are never revisited.</p>
+
+    <p>Intent Engineering is not a document format. It is a discipline of finding the destination quickly, safely, and efficiently through iterative learning. The journey of convergence <em>is</em> the engineering.</p>
+
     <h2>Why it works</h2>
 
     <p><strong>Constraints breed clarity.</strong> Why/What/Not removes the places people hide: roadmap theater, architecture cosplay, false precision. If you cannot state intent cleanly, you are not ready to build.</p>
