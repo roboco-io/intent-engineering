@@ -45,9 +45,9 @@ gh api repos/roboco-io/intent-engineering/pages -X POST -f source.branch=main -f
 - Hero: "Ship intent, not code."
 - 섹션 01 — The Problem: 스킬 없이 337줄 vs 스킬 적용 47줄 비교
 - 섹션 02 — The Framework: Why/What/Not/Learnings 네 레이어
-- 섹션 03 — The Lifecycle: seed → exploring → clarified → killed
+- 섹션 03 — The Lifecycle: seed → exploring → clarified → dropped
 - 섹션 04 — The Pipeline: 사람이 개입하는 두 지점 (의도 작성, 학습/판단)
-- 섹션 05 — Principles: Never write How, Admit uncertainty, Kill fast, Intent precision = output quality
+- 섹션 05 — Principles: Never write How, Admit uncertainty, Drop fast, Intent precision = output quality
 
 ### Quick Start (guide/quickstart.html)
 - 5단계: 상태 선택 → INTENT.md 생성 → 탐구/학습 → 상태 전이 → AI 핸드오프
@@ -88,7 +88,7 @@ gh api repos/roboco-io/intent-engineering/pages -X POST -f source.branch=main -f
 ## 관련 자산
 
 ### Intent Engineering 스킬
-`/Users/dohyunjung/Workspace/roboco-io/tools/plugins/plugins/workflow/skills/intent-engineering/`에 위치. SKILL.md + 5개 템플릿 (why-explore, why-commit, what, not, learning). 생명주기(seed/exploring/clarified/killed) 포함.
+`/Users/dohyunjung/Workspace/roboco-io/tools/plugins/plugins/workflow/skills/intent-engineering/`에 위치. SKILL.md + 5개 템플릿 (why-explore, why-commit, what, not, learning). 생명주기(seed/exploring/clarified/dropped) 포함.
 
 ### 오늘 만든 파일들 (지출증빙 폴더)
 - `INTENT.template.md` — 독립 템플릿
@@ -102,7 +102,7 @@ gh api repos/roboco-io/intent-engineering/pages -X POST -f source.branch=main -f
 
 1. **바이브 코딩 시대에 코드는 병목이 아니다. 의도의 부재가 병목이다.**
 2. **Spec 작성, 하네스 엔지니어링, 컨텍스트 엔지니어링은 모두 자동화 가능하다. 자동화할 수 없는 것은 Why/What/Not에 대한 인간의 결정뿐이다.**
-3. **의도는 한 번 적는 것이 아니라, 탐구와 학습을 통해 수렴하는 것이다. 수렴이 안 되면 종료(kill)하는 것도 좋은 결과다.**
+3. **의도는 한 번 적는 것이 아니라, 탐구와 학습을 통해 수렴하는 것이다. 수렴이 안 되면 종료(drop)하는 것도 좋은 결과다.**
 4. **사람이 개입하는 지점은 파이프라인의 맨 위(의도 작성)와 맨 아래(학습/판단) 두 곳뿐이다.**
 
 이 문서를 읽은 뒤 삭제해도 됩니다.

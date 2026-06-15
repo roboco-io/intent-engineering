@@ -111,7 +111,7 @@
 
     <p>それは<strong>設計ドキュメントではない</strong>：設計ドキュメントはHowを規定するが、Intent Documentはそれを拒否する。スタック、アーキテクチャ、スケジュールは実装の選択だからである。</p>
 
-    <p>それは<strong>PRDではない</strong>：PRDは包括的で静的であろうとするが、Intent Documentは最小限で、探索を通じて進化し、killedにすることもできる。</p>
+    <p>それは<strong>PRDではない</strong>：PRDは包括的で静的であろうとするが、Intent Documentは最小限で、探索を通じて進化し、droppedにすることもできる。</p>
 
     <p>それは<strong>フレームワークやツールではない</strong>：マークダウンファイルと規律である。</p>
 
@@ -163,13 +163,13 @@
             <td>AIに引き渡す。構築させる。</td>
         </tr>
         <tr>
-            <td class="highlight">killed</td>
+            <td class="highlight">dropped</td>
             <td>証拠が構築すべきでないと示している、または既存のソリューションが勝っている。</td>
             <td>理由を記録する。止める。これは良い結果である。</td>
         </tr>
     </table>
 
-    <p>最も難しい遷移は<strong>どの状態からでも → killed</strong>である。プロジェクトを始めることは安い。悪いプロジェクトを止めることは判断力である。</p>
+    <p>最も難しい遷移は<strong>どの状態からでも → dropped</strong>である。プロジェクトを始めることは安い。悪いプロジェクトを止めることは判断力である。</p>
 
     <h2>既存の概念との関係</h2>
 
@@ -213,7 +213,7 @@
          ↓
   [Feedback]            ← User data flows back
          ↓
-  [Learn & Decide]      ← Human evaluates, updates intent or kills</code></pre>
+  [Learn & Decide]      ← Human evaluates, updates intent or drops</code></pre>
 
     <p>Intentとフィードバックの間のすべては今や自動化可能である。技術スタック、アーキテクチャ、タスク分解、検証フロー、デプロイ頻度：すべて選択である。還元不可能な人間の仕事はWhy、What、Not、そしてLearningsである。</p>
 
@@ -223,7 +223,7 @@
 
     <p><strong>AIはあなたよりHowが得意である。</strong> AIはどの個人のエンジニアよりも広い実装の記憶を持っている。Howを過剰に指定することは、ソリューションをあなたの局所最適に制限する。</p>
 
-    <p><strong>終了は生産的である。</strong> 文書化されたkilledは無駄ではない。それは不確実性の返済である。死んだプロジェクトのLearningsは、出荷されたプロジェクトのコードより長く生き残ることが多い。</p>
+    <p><strong>終了は生産的である。</strong> 文書化されたdroppedは無駄ではない。それは不確実性の返済である。死んだプロジェクトのLearningsは、出荷されたプロジェクトのコードより長く生き残ることが多い。</p>
 
     <p><strong>Intentの精度はスケールする。</strong> Whyの一つの鋭い文がタスク生成、レビュー、テスト、デプロイに伝播する。曖昧なIntentは曖昧さを増幅させ、鋭いIntentは一貫性を増幅させる。</p>
 

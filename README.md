@@ -15,7 +15,7 @@ It's not a framework. It's not a tool. It's a file and a discipline.
 ```markdown
 # INTENT — [Project Name]
 
-> status: seed | exploring | clarified | killed
+> status: seed | exploring | clarified | dropped
 
 ## Why       ← Why does this exist?
 ## What      ← What are we building?
@@ -38,20 +38,20 @@ Intent evolves through four states:
 ```
 seed → exploring → clarified → build
   │        │            │
-  └────────┴────────────┴──→ killed
+  └────────┴────────────┴──→ dropped
 ```
 
 - **seed**: Just an idea. Write a hypothesis, start experimenting.
 - **exploring**: Actively validating through prototypes, interviews, research.
 - **clarified**: All sections filled with conviction. Ready to build.
-- **killed**: Evidence says stop. Record why — that knowledge is valuable.
+- **dropped**: Evidence says stop. Record why — that knowledge is valuable.
 
 ## Quick Start
 
 1. Create `INTENT.md` at your project root
 2. Pick your starting state (seed / exploring / clarified)
 3. Fill in Why. Be honest about What and Not — mark unknowns with `(?)`
-4. Explore, learn, update. Or kill when evidence says so.
+4. Explore, learn, update. Or drop when evidence says so.
 5. Once clarified, hand off to AI.
 
 Full guide: [intent.roboco.io](https://intent.roboco.io/) (or see `docs/`)

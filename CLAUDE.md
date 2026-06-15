@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Intent Engineering — a static site introducing the "Ship intent, not code." paradigm. Humans define intent via INTENT.md (Why/What/Not/Learnings) and delegate implementation to AI. Intent evolves through a lifecycle: seed → exploring → clarified → killed.
+Intent Engineering — a static site introducing the "Ship intent, not code." paradigm. Humans define intent via INTENT.md (Why/What/Not/Learnings) and delegate implementation to AI. Intent evolves through a lifecycle: seed → exploring → clarified → dropped.
 
 ## Architecture
 
@@ -29,7 +29,7 @@ Intent Engineering — a static site introducing the "Ship intent, not code." pa
 - **English is the source of truth** — author content in English first, then translate
 - A PostToolUse hook auto-reminds you to run `/translate` after editing English docs
 - `/translate` launches parallel agents (one per language) to regenerate `docs/{ko,zh,ja}/`
-- **Untranslatable terms**: seed, exploring, clarified, killed, INTENT.md, CLAUDE.md, Why, What, Not, Learnings
+- **Untranslatable terms**: seed, exploring, clarified, dropped, INTENT.md, CLAUDE.md, Why, What, Not, Learnings
 - **Korean exception**: translate 'Intent' as '의도' (but keep 'Intent Engineering' and 'INTENT.md' as-is)
 - Other languages (zh, ja) keep 'Intent' untranslated
 - Each page footer has a translate-bar linking to the other language versions

@@ -27,7 +27,7 @@ Launch one agent per language using the Agent tool with `run_in_background: true
 1. Read the English source file fully
 2. Translate ALL visible text content to the target language
 3. Preserve ALL HTML structure, CSS, and code examples exactly as-is
-4. Keep technical terms untranslated: seed, exploring, clarified, killed, INTENT.md, CLAUDE.md, Why, What, Not, Learnings
+4. Keep technical terms untranslated: seed, exploring, clarified, dropped, INTENT.md, CLAUDE.md, Why, What, Not, Learnings
    - Exception for Korean (ko): translate 'Intent' as '의도' (but keep 'Intent Engineering' and 'INTENT.md' as-is)
 5. Set `<html lang="{lang}">` appropriately (`ko`, `zh-CN`, `ja`)
 6. Fix relative paths:

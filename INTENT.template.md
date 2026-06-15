@@ -1,6 +1,6 @@
 # INTENT — [Project Name]
 
-> status: seed | exploring | clarified | killed
+> status: seed | exploring | clarified | dropped
 
 ## Why
 
