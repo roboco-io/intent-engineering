@@ -1,0 +1,52 @@
+<!-- Source for docs/assets/og-image.png. Regenerate with:
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+    --window-size=1200,630 --screenshot=docs/assets/og-image.png "file://$PWD/assets-src/og-image.html"
+-->
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background:#0a0a0a; color:#e5e5e5; -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  .glow { position:absolute; left:-200px; top:-300px; width:900px; height:900px;
+    background: radial-gradient(circle, rgba(59,130,246,0.22) 0%, rgba(59,130,246,0) 60%); }
+  .grid { position:absolute; inset:0;
+    background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+    background-size: 60px 60px; opacity:0.5;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 85%); }
+  .wrap { position:relative; padding:88px 96px; height:100%; display:flex; flex-direction:column; justify-content:space-between; }
+  .badge { display:inline-block; font-size:22px; letter-spacing:0.5px; color:#888;
+    border:1px solid #333; border-radius:999px; padding:8px 20px; background:#141414; align-self:flex-start; }
+  h1 { font-size:112px; line-height:1.02; font-weight:800; letter-spacing:-3px; margin-top:28px; }
+  h1 span { color:#3b82f6; }
+  .sub { font-size:30px; color:#888; margin-top:26px; line-height:1.4; max-width:900px; }
+  .foot { display:flex; align-items:center; justify-content:space-between; }
+  .tags { display:flex; gap:12px; }
+  .tag { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size:20px; padding:8px 16px; border-radius:6px; font-weight:600; }
+  .t-why { background:#1e3a5f; color:#3b82f6; }
+  .t-what { background:#1a3a1a; color:#22c55e; }
+  .t-not { background:#3a1a1a; color:#ef4444; }
+  .t-learn { background:#2a1a3a; color:#a855f7; }
+  .url { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size:24px; color:#666; }
+</style></head>
+<body>
+  <div class="glow"></div><div class="grid"></div>
+  <div class="wrap">
+    <div>
+      <div class="badge">Human intent. AI execution.</div>
+      <h1>Ship <span>intent</span>,<br>not code.</h1>
+      <p class="sub">Define Why, What, and Not. AI can choose the rest.</p>
+    </div>
+    <div class="foot">
+      <div class="tags">
+        <span class="tag t-why">Why</span><span class="tag t-what">What</span>
+        <span class="tag t-not">Not</span><span class="tag t-learn">Learnings</span>
+      </div>
+      <div class="url">intent.roboco.io</div>
+    </div>
+  </div>
+</body></html>
